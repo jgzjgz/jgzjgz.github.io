@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="蒋钢柱" />
+
+
+
+<meta name="description" content="通过网络整理了一些关于ctf，网安的学习网站，希望能够帮到大家">
+<meta name="keywords" content="CTF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络安全学习和CTF学习必不可少的网站">
+<meta property="og:url" content="http://yoursite.com/2017/11/17/网络安全学习和CTF必不可少的一些网站/index.html">
+<meta property="og:site_name" content="流逝在人海">
+<meta property="og:description" content="通过网络整理了一些关于ctf，网安的学习网站，希望能够帮到大家">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-17T09:48:35.526Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网络安全学习和CTF学习必不可少的网站">
+<meta name="twitter:description" content="通过网络整理了一些关于ctf，网安的学习网站，希望能够帮到大家">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="流逝在人海" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>网络安全学习和CTF学习必不可少的网站 | 流逝在人海</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/super.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">蒋钢柱</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" href="https://github.com/jgzjgz/" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa QQ" href="/931138798" title="QQ"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">只有今天努力过的人&lt;br&gt;&lt;br&gt;将来才有后悔的权利&lt;br&gt;我们要把未来抓在自己的手上</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">蒋钢柱</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/super.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">蒋钢柱</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/jgzjgz/" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="/931138798" title="QQ"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-网络安全学习和CTF必不可少的一些网站" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/" class="article-date">
+      <time datetime="2017-11-17T09:24:17.000Z" itemprop="datePublished">2017-11-17</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      网络安全学习和CTF学习必不可少的网站
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>通过网络整理了一些关于ctf，网安的学习网站，希望能够帮到大家</p>
+<a id="more"></a>
+<h2 id="综合学习平台："><a href="#综合学习平台：" class="headerlink" title="综合学习平台："></a>综合学习平台：</h2><p><a href="http://www.sec-wiki.com/skill/" target="_blank" rel="noopener">http://www.sec-wiki.com/skill/</a> 安全技能(里面渗透逆向编程都有介绍)<br><br><a href="http://edu.gooann.com/" target="_blank" rel="noopener">http://edu.gooann.com/</a> 谷安网校<br><br><a href="http://www.jikexueyuan.com/" target="_blank" rel="noopener">http://www.jikexueyuan.com/</a> 极客学院<br><br><a href="http://www.hetianlab.com/" target="_blank" rel="noopener">http://www.hetianlab.com/</a> 合天<br><br><a href="http://www.moonsos.com/" target="_blank" rel="noopener">http://www.moonsos.com/</a> 米安网<br><br><a href="http://www.ichunqiu.com/" target="_blank" rel="noopener">http://www.ichunqiu.com/</a> i 春秋<br><br><a href="http://www.honyaedu.com/" target="_blank" rel="noopener">http://www.honyaedu.com/</a> -红亚<br><br><a href="http://www.baimaoxueyuan.com/" target="_blank" rel="noopener">http://www.baimaoxueyuan.com/</a> 白帽学院<br><br><a href="http://www.simplexue.com/ctf/index" target="_blank" rel="noopener">http://www.simplexue.com/ctf/index</a> 西普学院<br><br><a href="http://www.imooc.com/course/list" target="_blank" rel="noopener">http://www.imooc.com/course/list</a> 慕课<br><br><a href="http://www.secbox.cn/" target="_blank" rel="noopener">http://www.secbox.cn/</a> 安全盒子<br><br><a href="http://www.freebuf.com/" target="_blank" rel="noopener">http://www.freebuf.com/</a> freebuf<br><br><a href="http://bobao.360.cn/" target="_blank" rel="noopener">http://bobao.360.cn/</a> 360安全播报<br><br><a href="http://www.wooyun.org/" target="_blank" rel="noopener">http://www.wooyun.org/</a> 乌云<br><br><a href="http://drops.wooyun.org/" target="_blank" rel="noopener">http://drops.wooyun.org/</a> 乌云知识库<br><br><a href="http://wiki.wooyun.org/" target="_blank" rel="noopener">http://wiki.wooyun.org/</a> WooYun WiKi<br><br><a href="https://www.91ri.org/" target="_blank" rel="noopener">https://www.91ri.org/</a> 91ri<br><br><a href="https://www.t00ls.net/tools" target="_blank" rel="noopener">https://www.t00ls.net/tools</a><br><br><a href="http://www.ijiandao.com/" target="_blank" rel="noopener">http://www.ijiandao.com/</a> 爱尖刀<br><br><a href="http://www.secwk.com/article/index.html" target="_blank" rel="noopener">http://www.secwk.com/article/index.html</a> 威客众测<br><br><a href="http://bluereader.org/" target="_blank" rel="noopener">http://bluereader.org/</a> 深蓝阅读<br><br><a href="http://www.shentou.org/" target="_blank" rel="noopener">http://www.shentou.org/</a> 黑客安全军火库<br><br><a href="http://netsecurity.51cto.com/" target="_blank" rel="noopener">http://netsecurity.51cto.com/</a> 51cto<br><br><a href="http://security.csdn.net/" target="_blank" rel="noopener">http://security.csdn.net/</a> csdn<br><br><a href="http://www.80sec.com/" target="_blank" rel="noopener">http://www.80sec.com/</a> 80sec team<br><br><a href="https://security.alibaba.com/blog.htm?spm=0.0.0.0.knOqaI" target="_blank" rel="noopener">https://security.alibaba.com/blog.htm?spm=0.0.0.0.knOqaI</a> 阿里巴巴安全响应中心<br><br><a href="http://security.tencent.com/index.php/blog" target="_blank" rel="noopener">http://security.tencent.com/index.php/blog</a> 腾讯安全应急响应中心 博客<br><br><a href="http://security.360.cn/blog" target="_blank" rel="noopener">http://security.360.cn/blog</a> 360安全应急响应中心 博客<br><br><a href="http://sec.baidu.com/index.php?research/list" target="_blank" rel="noopener">http://sec.baidu.com/index.php?research/list</a> 百度安全应急响应中心 博客<br></p>
+<hr>
+<h2 id="博客推荐"><a href="#博客推荐" class="headerlink" title="博客推荐"></a>博客推荐</h2><p><a href="http://security.tencent.com/index.php/blog" target="_blank" rel="noopener">http://security.tencent.com/index.php/blog</a><br><br><a href="http://217.logdown.com/" target="_blank" rel="noopener">http://217.logdown.com/</a> 217<br><br><a href="http://www.blue-lotus.net" target="_blank" rel="noopener">http://www.blue-lotus.net</a> blue-lotus 蓝莲花<br><br><a href="http://blog.0ops.net/" target="_blank" rel="noopener">http://blog.0ops.net/</a> 0ops<br><br><a href="http://le4f.net/" target="_blank" rel="noopener">http://le4f.net/</a>  e4f <br><br><a href="http://www.programlife.net/" target="_blank" rel="noopener">http://www.programlife.net/</a> 代码疯子<br><br><a href="http://www.hackdog.me/" target="_blank" rel="noopener">http://www.hackdog.me/</a> redrain’blog<br><br><a href="http://www.syjzwjj.com/" target="_blank" rel="noopener">http://www.syjzwjj.com/</a>  俊杰<br><br><a href="http://syclover.sinaapp.com/" target="_blank" rel="noopener">http://syclover.sinaapp.com/</a> 三叶草安全小组<br><br><a href="http://appleu0.sinaapp.com/" target="_blank" rel="noopener">http://appleu0.sinaapp.com/</a> appleU0大大<br><br><a href="http://bl4ck.in/" target="_blank" rel="noopener">http://bl4ck.in/</a> tomato表哥<br><br><a href="http://www.sco4x0.com/" target="_blank" rel="noopener">http://www.sco4x0.com/</a> 4叔叔<br><br><a href="http://laterain.sinaapp.com/" target="_blank" rel="noopener">http://laterain.sinaapp.com/</a> 白神<br><br><a href="http://0nly3nd.sinaapp.com/" target="_blank" rel="noopener">http://0nly3nd.sinaapp.com/</a> 0nly3nd<br><br><a href="http://hijacks.in/" target="_blank" rel="noopener">http://hijacks.in/</a> LateRain’blog<br><br><a href="http://www.waitalone.cn/" target="_blank" rel="noopener">http://www.waitalone.cn/</a>  独自等待<br><br><a href="http://evilcos.me/" target="_blank" rel="noopener">http://evilcos.me/</a> 余弦<br><br><a href="http://www.moonsec.com/" target="_blank" rel="noopener">http://www.moonsec.com/</a> 暗月<br><br><a href="http://www.cnblogs.com/xuanhun/" target="_blank" rel="noopener">http://www.cnblogs.com/xuanhun/</a> 玄魂<br><br><a href="https://www.leavesongs.com/" target="_blank" rel="noopener">https://www.leavesongs.com/</a> 离别歌<br><br><a href="http://huaidan.org/" target="_blank" rel="noopener">http://huaidan.org/</a> 鬼仔<br><br><a href="http://www.03sec.com/" target="_blank" rel="noopener">http://www.03sec.com/</a> sky的自留地<br><br><a href="http://joychou.org/" target="_blank" rel="noopener">http://joychou.org/</a> jc老师<br><br><a href="http://www.unhonker.com/" target="_blank" rel="noopener">http://www.unhonker.com/</a> 90’s blog<br><br><a href="http://www1.taosay.net/" target="_blank" rel="noopener">http://www1.taosay.net/</a> 道哥的黑板报<br><br><a href="http://blog.knownsec.com/" target="_blank" rel="noopener">http://blog.knownsec.com/</a> 知道创于<br><br><a href="http://www.sadk.org/" target="_blank" rel="noopener">http://www.sadk.org/</a> 焠安<br><br><a href="http://www.cnseay.com/" target="_blank" rel="noopener">http://www.cnseay.com/</a> seay’blog<br><br><a href="http://blog.aptsec.net/" target="_blank" rel="noopener">http://blog.aptsec.net/</a> AptSec Team<br><br><a href="http://lcx.cc/" target="_blank" rel="noopener">http://lcx.cc/</a> 网络安全研究中心<br><br><a href="http://www.kali.org.cn/" target="_blank" rel="noopener">http://www.kali.org.cn/</a> kali中文网<br></p>
+<hr>
+<h2 id="渗透"><a href="#渗透" class="headerlink" title="渗透:"></a>渗透:</h2><p><a href="http://www.wooyun.org/" target="_blank" rel="noopener">http://www.wooyun.org/</a> 乌云<br><br><a href="http://bbs.blackbap.org/" target="_blank" rel="noopener">http://bbs.blackbap.org/</a> 习科<br><br><a href="http://www.1937cn.net/" target="_blank" rel="noopener">http://www.1937cn.net/</a> 1937<br><br><a href="http://forum.cnsec.org/" target="_blank" rel="noopener">http://forum.cnsec.org/</a> 暗组<br><br><a href="http://www.k33nteam.org/" target="_blank" rel="noopener">http://www.k33nteam.org/</a> keen team<br><br><a href="http://forum.eviloctal.com/" target="_blank" rel="noopener">http://forum.eviloctal.com/</a> 邪恶八进制<br><br><a href="http://www.evil0x.com/" target="_blank" rel="noopener">http://www.evil0x.com/</a> 邪恶十六进制<br><br><a href="http://www.myhack58.com/" target="_blank" rel="noopener">http://www.myhack58.com/</a> 黑吧安全吧<br><br><a href="http://www.cnhonkerarmy.com/" target="_blank" rel="noopener">http://www.cnhonkerarmy.com/</a> 中国红客 红盟<br><br><a href="http://www.chinahacker.com/" target="_blank" rel="noopener">http://www.chinahacker.com/</a> 中国黑客联盟<br><br><a href="http://www.hxhack.com/" target="_blank" rel="noopener">http://www.hxhack.com/</a> 华夏黑客联盟<br><br><a href="http://www.heikexiehui.com/" target="_blank" rel="noopener">http://www.heikexiehui.com/</a> 中国黑客协会官网<br><br><a href="http://www.hackbase.com/" target="_blank" rel="noopener">http://www.hackbase.com/</a> 黑基<br><br><a href="http://www.2cto.com/" target="_blank" rel="noopener">http://www.2cto.com/</a> 红黑联盟<br><br><a href="http://bbs.2cto.com/" target="_blank" rel="noopener">http://bbs.2cto.com/</a> 红黑联盟论坛<br><br><a href="http://www.hackwd.com/" target="_blank" rel="noopener">http://www.hackwd.com/</a> <br><br><a href="http://www.heishou.com.cn/" target="_blank" rel="noopener">http://www.heishou.com.cn/</a> 黑手安全网<br><br><a href="https://www.sitedirsec.com/" target="_blank" rel="noopener">https://www.sitedirsec.com/</a> 非安全中国网<br><br><a href="http://www.zatokasztuki.com/" target="_blank" rel="noopener">http://www.zatokasztuki.com/</a> 学生技术联盟<br></p>
+<hr>
+<h2 id="逆向"><a href="#逆向" class="headerlink" title="逆向"></a>逆向</h2><p><a href="http://www.52pojie.cn/" target="_blank" rel="noopener">http://www.52pojie.cn/</a> 吾爱破解<br><br><a href="http://bbs.pediy.com/" target="_blank" rel="noopener">http://bbs.pediy.com/</a> 看雪论坛<br></p>
+<hr>
+<h2 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h2><p><a href="http://www.he11oworld.com/" target="_blank" rel="noopener">http://www.he11oworld.com/</a> hello word <br><br><a href="http://www.w3school.com.cn/" target="_blank" rel="noopener">http://www.w3school.com.cn/</a> w3school<br><br><a href="http://www.runoob.com/" target="_blank" rel="noopener">http://www.runoob.com/</a> 菜鸟<br><br><a href="http://www.51zxw.net/" target="_blank" rel="noopener">http://www.51zxw.net/</a><br><br><a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br><br><a href="http://navisec-git.qiniudn.com/" target="_blank" rel="noopener">http://navisec-git.qiniudn.com/</a><br><br><a href="http://c.biancheng.net/cpp/" target="_blank" rel="noopener">http://c.biancheng.net/cpp/</a><br><br><a href="http://www.liaoxuefeng.com/" target="_blank" rel="noopener">http://www.liaoxuefeng.com/</a><br><br><a href="http://www.php100.com/" target="_blank" rel="noopener">http://www.php100.com/</a><br><br><a href="https://ruby-china.org/wiki" target="_blank" rel="noopener">https://ruby-china.org/wiki</a><br><br><a href="http://bbs.csdn.net/forums/Java/" target="_blank" rel="noopener">http://bbs.csdn.net/forums/Java/</a><br><br><a href="http://outofmemory.cn/tutorial/" target="_blank" rel="noopener">http://outofmemory.cn/tutorial/</a><br></p>
+<hr>
+<h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p><a href="http://zhuanlan.zhihu.com/Evi1m0/19706178" target="_blank" rel="noopener">http://zhuanlan.zhihu.com/Evi1m0/19706178</a> Evi1m0: 书籍推荐<br><br><a href="http://www.douban.com/doulist/3339701/" target="_blank" rel="noopener">http://www.douban.com/doulist/3339701/</a> 信息安全必读书单<br><br><a href="http://www.douban.com/doulist/1363865/" target="_blank" rel="noopener">http://www.douban.com/doulist/1363865/</a> 信息安全经典书籍<br><br><a href="http://www.zhihu.com/question/21390646" target="_blank" rel="noopener">http://www.zhihu.com/question/21390646</a><br><br><a href="http://my.oschina.net/bluefly/blog/335409?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="noopener">http://my.oschina.net/bluefly/blog/335409?utm_source=tuicool&amp;utm_medium=referral</a> Web安全核心书单<br><br><a href="http://www.secbox.cn/hacker/8205.html" target="_blank" rel="noopener">http://www.secbox.cn/hacker/8205.html</a> 书安SecBook 第一期《icloud IOS安全大揭秘》<br><br><a href="http://www.secbox.cn/hacker/7366.html" target="_blank" rel="noopener">http://www.secbox.cn/hacker/7366.html</a> 书安SecBook 第二期《信息安全攻防赛》<br></p>
+<hr>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p>ftp://222.18.158.199/(校园网内网可以访问，不仅仅只有工具哦，有许多总结，各方面的)<br><br><a href="http://forum.cnsec.org/thread-94330-1-1.html" target="_blank" rel="noopener">http://forum.cnsec.org/thread-94330-1-1.html</a> 2015暗组工具包（渗透）<br><br><a href="http://bbs.secbox.cn/thread-196-1-1.html" target="_blank" rel="noopener">http://bbs.secbox.cn/thread-196-1-1.html</a> 2015_安全盒子工具包<br><br><a href="http://www.secbox.cn/hacker/tools/3552.html" target="_blank" rel="noopener">http://www.secbox.cn/hacker/tools/3552.html</a> 法客论坛2015工具包-第三版<br><br><a href="http://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=388015" target="_blank" rel="noopener">http://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=388015</a>  吾爱破解工具包 2015/7/22（逆向）<br><br><a href="http://down.52pojie.cn/" target="_blank" rel="noopener">http://down.52pojie.cn/</a> 爱盘 <br><br><a href="http://www.52pojie.cn/thread-341238-1-1.html" target="_blank" rel="noopener">http://www.52pojie.cn/thread-341238-1-1.html</a> 吾爱破解论坛专用破解虚拟机<br></p>
+<hr>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><a href="http://www.zhihu.com/topic/19558642" target="_blank" rel="noopener">http://www.zhihu.com/topic/19558642</a> 黑客知乎话题<br><br><a href="http://www.zhihu.com/topic/20011446" target="_blank" rel="noopener">http://www.zhihu.com/topic/20011446</a> ctf知乎话题<br><br><a href="http://www.zhihu.com/topic/19561983" target="_blank" rel="noopener">http://www.zhihu.com/topic/19561983</a> 信息安全知乎话题<br><br><a href="http://zhuanlan.zhihu.com/evilcos/19961466" target="_blank" rel="noopener">http://zhuanlan.zhihu.com/evilcos/19961466</a> 余弦知乎专栏<br></p>
+<hr>
+<h2 id="CTF方面"><a href="#CTF方面" class="headerlink" title="CTF方面"></a>CTF方面</h2><p><a href="http://blog.idf.cn/2015/02/ctf-field-guide/" target="_blank" rel="noopener">http://blog.idf.cn/2015/02/ctf-field-guide/</a><br><br><a href="http://tieba.baidu.com/p/3933947157" target="_blank" rel="noopener">http://tieba.baidu.com/p/3933947157</a> ctf大全<br><br><a href="https://ctftime.org/event/list/upcoming" target="_blank" rel="noopener">https://ctftime.org/event/list/upcoming</a> 各种CTF赛事预告<br></p>
+<hr>
+<h2 id="ctf逆向"><a href="#ctf逆向" class="headerlink" title="ctf逆向:"></a>ctf逆向:</h2><p><a href="http://reversing.kr/" target="_blank" rel="noopener">http://reversing.kr/</a><br><br><a href="http://pwnable.kr/" target="_blank" rel="noopener">http://pwnable.kr/</a><br><br><a href="http://exploit-exercises.com/" target="_blank" rel="noopener">http://exploit-exercises.com/</a><br><br><a href="http://overthewire.org" target="_blank" rel="noopener">http://overthewire.org</a><br><br><a href="http://security.cs.rpi.edu/courses/binexp-spring2015/" target="_blank" rel="noopener">http://security.cs.rpi.edu/courses/binexp-spring2015/</a> bin 干货区<br><br><a href="http://www.52pojie.cn/forum-67-1.html" target="_blank" rel="noopener">http://www.52pojie.cn/forum-67-1.html</a> 『2014CrackMe大赛』<br></p>
+<p>SQL:<br><a href="https://github.com/Audi-1/sqli-labs" target="_blank" rel="noopener">https://github.com/Audi-1/sqli-labs</a><br><br><a href="http://redtiger.labs.overthewire.org/" target="_blank" rel="noopener">http://redtiger.labs.overthewire.org/</a><br></p>
+<p>ctf XSS:<br><a href="http://prompt.ml/" target="_blank" rel="noopener">http://prompt.ml/</a><br><br><a href="http://xss.pkav.net/xss/" target="_blank" rel="noopener">http://xss.pkav.net/xss/</a><br><br><a href="http://www.doscn.org/xss/" target="_blank" rel="noopener">http://www.doscn.org/xss/</a><br><br><a href="http://xss-quiz.int21h.jp/" target="_blank" rel="noopener">http://xss-quiz.int21h.jp/</a><br><br><a href="http://escape.alf.nu/" target="_blank" rel="noopener">http://escape.alf.nu/</a><br></p>
+<p>ctf综合练习：</p>
+<p><a href="http://hackinglab.cn/" target="_blank" rel="noopener">http://hackinglab.cn/</a> 网络信息安全攻防学习平台<br><br><a href="http://captf.com/" target="_blank" rel="noopener">http://captf.com/</a> ctf题目<br><br><a href="http://cafebabe.cc/nazo/" target="_blank" rel="noopener">http://cafebabe.cc/nazo/</a> 脑洞开发<br><br><a href="http://1111.segmentfault.com/" target="_blank" rel="noopener">http://1111.segmentfault.com/</a> 光棍节程序员闯关秀<br><br><a href="http://www.helloisa.com/test/" target="_blank" rel="noopener">http://www.helloisa.com/test/</a><br><br><a href="http://www.fj543.com/hack/" target="_blank" rel="noopener">http://www.fj543.com/hack/</a> 黑客丛林之旅<br><br><a href="http://monyer.com/game/game1//" target="_blank" rel="noopener">http://monyer.com/game/game1//</a> 梦之光芒的小游戏<br><br><a href="http://oj.xctf.org.cn/" target="_blank" rel="noopener">http://oj.xctf.org.cn/</a> XCTF_OJ练习平台<br><br><a href="http://hackgame.blackbap.org/" target="_blank" rel="noopener">http://hackgame.blackbap.org/</a> 习科黑客游戏<br><br><a href="http://ctf.3sec.cn/" target="_blank" rel="noopener">http://ctf.3sec.cn/</a> Jlu.CTF<br><br><a href="http://www.baimaoxueyuan.com/ctf" target="_blank" rel="noopener">http://www.baimaoxueyuan.com/ctf</a> 白帽学院ctf挑战赛<br><br><a href="http://www.ichunqiu.com/tiaozhans" target="_blank" rel="noopener">http://www.ichunqiu.com/tiaozhans</a> i春秋ctf挑战<br><br><a href="http://ctf.idf.cn/" target="_blank" rel="noopener">http://ctf.idf.cn/</a> idf 实验室<br><br><a href="http://ctf.moonsos.com/pentest/index.php" target="_blank" rel="noopener">http://ctf.moonsos.com/pentest/index.php</a> 米安网ctf<br><br><a href="http://www.hetianlab.com/CTFrace.html" target="_blank" rel="noopener">http://www.hetianlab.com/CTFrace.html</a> 合天ctf<br><br><a href="http://www.shiyanbar.com/ctf/index" target="_blank" rel="noopener">http://www.shiyanbar.com/ctf/index</a> 实验吧(前名西普学院）<br><br><a href="http://hkyx.myhack58.com/" target="_blank" rel="noopener">http://hkyx.myhack58.com/</a> 黑吧安全网-红客闯关游戏<br><br><a href="http://202.108.211.5/" target="_blank" rel="noopener">http://202.108.211.5/</a> 实训竞赛系统<br></p>
+<h2 id="国外比较好的几个综合练习平台"><a href="#国外比较好的几个综合练习平台" class="headerlink" title="国外比较好的几个综合练习平台"></a>国外比较好的几个综合练习平台</h2><p><a href="http://www.wechall.net" target="_blank" rel="noopener">http://www.wechall.net</a><br><br><a href="http://insight-labs.org/" target="_blank" rel="noopener">http://insight-labs.org/</a><br><br><a href="http://wargame.kr/" target="_blank" rel="noopener">http://wargame.kr/</a><br><br><a href="http://canyouhack.it/" target="_blank" rel="noopener">http://canyouhack.it/</a><br><br><a href="http://hackit.sinaapp.com/" target="_blank" rel="noopener">http://hackit.sinaapp.com/</a><br><br><a href="http://webhacking.kr/" target="_blank" rel="noopener">http://webhacking.kr/</a><br><br><a href="http://fun.coolshell.cn/" target="_blank" rel="noopener">http://fun.coolshell.cn/</a><br><br><a href="http://ringzer0team.com/challenge" target="_blank" rel="noopener">http://ringzer0team.com/challenge</a><br><br><a href="https://backdoor.sdslabs.co/" target="_blank" rel="noopener">https://backdoor.sdslabs.co/</a><br><br><a href="http://smashthestack.org/" target="_blank" rel="noopener">http://smashthestack.org/</a> 漏洞利用练习网站<br></p>
+<h2 id="ctf-writeup-WP"><a href="#ctf-writeup-WP" class="headerlink" title="ctf writeup(WP):"></a>ctf writeup(WP):</h2><p><a href="http://drops.wooyun.org/?s=writeup&amp;submit=%E6%90%9C%E7%B4%A2" target="_blank" rel="noopener">http://drops.wooyun.org/?s=writeup&amp;submit=%E6%90%9C%E7%B4%A2</a><br><br><a href="http://bobao.360.cn/ctf/" target="_blank" rel="noopener">http://bobao.360.cn/ctf/</a><br><br><a href="https://github.com/ctfs/" target="_blank" rel="noopener">https://github.com/ctfs/</a> 各种 writeup<br><br><a href="http://sec.yka.me/" target="_blank" rel="noopener">http://sec.yka.me/</a> CTF Writeup Summary<br><br><a href="https://ctf-team.vulnhub.com/" target="_blank" rel="noopener">https://ctf-team.vulnhub.com/</a> Write Ups<br></p>
+<hr>
+
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#综合学习平台："><span class="toc-number">1.</span> <span class="toc-text">综合学习平台：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客推荐"><span class="toc-number">2.</span> <span class="toc-text">博客推荐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#渗透"><span class="toc-number">3.</span> <span class="toc-text">渗透:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#逆向"><span class="toc-number">4.</span> <span class="toc-text">逆向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编程"><span class="toc-number">5.</span> <span class="toc-text">编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">6.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具"><span class="toc-number">7.</span> <span class="toc-text">工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他"><span class="toc-number">8.</span> <span class="toc-text">其他</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CTF方面"><span class="toc-number">9.</span> <span class="toc-text">CTF方面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ctf逆向"><span class="toc-number">10.</span> <span class="toc-text">ctf逆向:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#国外比较好的几个综合练习平台"><span class="toc-number">11.</span> <span class="toc-text">国外比较好的几个综合练习平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ctf-writeup-WP"><span class="toc-number">12.</span> <span class="toc-text">ctf writeup(WP):</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"网络安全学习和CTF学习必不可少的网站　| 流逝在人海　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/">网络安全学习和CTF学习必不可少的网站</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017 蒋钢柱
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 2;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
