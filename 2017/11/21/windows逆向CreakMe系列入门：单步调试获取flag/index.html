@@ -15,13 +15,13 @@
 
 
 
-<meta name="description" content="CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。">
+<meta name="description" content="CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。 程序很简单，输入一个密码，程序会自动比对密码是否正确，正确输出you are right，错误输出you are wrong。逆向分析工具我选择的是idawindows下的调试工具我选择的是OD用OD加载该程序，寻找该程序进行密">
 <meta name="keywords" content="windows逆向">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows逆向CreakMe系列入门：单步调试获取flag">
 <meta property="og:url" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag/index.html">
 <meta property="og:site_name" content="流逝在人海">
-<meta property="og:description" content="CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。">
+<meta property="og:description" content="CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。 程序很简单，输入一个密码，程序会自动比对密码是否正确，正确输出you are right，错误输出you are wrong。逆向分析工具我选择的是idawindows下的调试工具我选择的是OD用OD加载该程序，寻找该程序进行密码比对的部分经过分析，我初步定位了一个函数点F7步入该函数发现了输出正确错误的语">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag/img/CreakMe002/20.png">
 <meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag/img/CreakMe002/1.png">
@@ -38,10 +38,10 @@
 <meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag/img/CreakMe002/16.png">
 <meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag/img/CreakMe002/17.png">
 <meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag/img/CreakMe002/18.png">
-<meta property="og:updated_time" content="2017-11-21T08:07:23.480Z">
+<meta property="og:updated_time" content="2017-11-21T08:15:20.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows逆向CreakMe系列入门：单步调试获取flag">
-<meta name="twitter:description" content="CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。">
+<meta name="twitter:description" content="CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。 程序很简单，输入一个密码，程序会自动比对密码是否正确，正确输出you are right，错误输出you are wrong。逆向分析工具我选择的是idawindows下的调试工具我选择的是OD用OD加载该程序，寻找该程序进行密码比对的部分经过分析，我初步定位了一个函数点F7步入该函数发现了输出正确错误的语">
 <meta name="twitter:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag/img/CreakMe002/20.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -323,7 +323,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。<br><a id="more"></a><br><img src="img\CreakMe002\20.png" alt=""><br><br><br>程序很简单，输入一个密码，程序会自动比对密码是否正确，正确输出you are right，错误输出you are wrong。<br><br><br>逆向分析工具我选择的是ida<br><br><br>windows下的调试工具我选择的是OD<br><br><br>用OD加载该程序，寻找该程序进行密码比对的部分<br><br><br>经过分析，我初步定位了一个函数点<br><br><br><img src="img\CreakMe002\1.png" alt=""><br><br><br>F7步入该函数<br><br><br><img src="img\CreakMe002\2.png" alt=""><br><br><br>发现了输出正确错误的语句，证明我们的具体思路还是正确的<br><br><br><img src="img\CreakMe002\4.png" alt=""><br><br><br>寻找到了接受字符串的函数<br><br><br><img src="img\CreakMe002\5.png" alt=""><br><br><br>执行完发现我们输入的12345678储存在储存器EAX中，接着我们发现了一个可疑函数00401000，猜测这个函数就是判断函数。F7跟入。<br><br><br><img src="img\CreakMe002\7.png" alt=""><br><br><br>单步调试之后发现程序加载了一串可疑字符串，储存在EDI中<br><br><br><img src="img\CreakMe002\8.png" alt=""><br><br><br>接着单步调试，发现了一个解密逻辑<br><br><br><img src="img\CreakMe002\9.png" alt=""><br><br><br>加载的可疑字符串经过解密逻辑之后会形成一串有语义的字符串，猜测这个就是该程序的密码。<br><br><br><img src="img\CreakMe002\10.png" alt=""><br><br><br>经过运行后发现该密码储存在ESP储存器中<br>接下来会加载我们输入的字符串<br><br><br><img src="img\CreakMe002\12.png" alt=""><br><br><br>接下来程序会将两个字符串加载到两个寄存器DL，BL中，然后进行对比。<br><br><br><img src="img\CreakMe002\13.png" alt=""><br><br><br>这里因为我们输入的是错误的，因此会跳转到输出错误的语句<br><br><br><img src="img\CreakMe002\15.png" alt=""><br><br><br><img src="img\CreakMe002\16.png" alt=""><br><br><br>当我们输入N0problem是，程序就成功输出正确并跳转到正确的逻辑<br><br><img src="img\CreakMe002\17.png" alt=""><br><br><br><img src="img\CreakMe002\18.png" alt=""><br><br></p>
+        <p>CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。</p>
+<p><img src="img\CreakMe002\20.png" alt=""><br><br><br>程序很简单，输入一个密码，程序会自动比对密码是否正确，正确输出you are right，错误输出you are wrong。<br><br><br>逆向分析工具我选择的是ida<br><br><br>windows下的调试工具我选择的是OD<br><br><br>用OD加载该程序，寻找该程序进行密码比对的部分<br><br><br>经过分析，我初步定位了一个函数点<br><br><br><img src="img\CreakMe002\1.png" alt=""><br><br><br>F7步入该函数<br><br><br><img src="img\CreakMe002\2.png" alt=""><br><br><br>发现了输出正确错误的语句，证明我们的具体思路还是正确的<br><br><br><img src="img\CreakMe002\4.png" alt=""><br><br><br>寻找到了接受字符串的函数<br><br><br><img src="img\CreakMe002\5.png" alt=""><br><br><br>执行完发现我们输入的12345678储存在储存器EAX中，接着我们发现了一个可疑函数00401000，猜测这个函数就是判断函数。F7跟入。<br><br><br><img src="img\CreakMe002\7.png" alt=""><br><br><br>单步调试之后发现程序加载了一串可疑字符串，储存在EDI中<br><br><br><img src="img\CreakMe002\8.png" alt=""><br><br><br>接着单步调试，发现了一个解密逻辑<br><br><br><img src="img\CreakMe002\9.png" alt=""><br><br><br>加载的可疑字符串经过解密逻辑之后会形成一串有语义的字符串，猜测这个就是该程序的密码。<br><br><br><img src="img\CreakMe002\10.png" alt=""><br><br><br>经过运行后发现该密码储存在ESP储存器中<br>接下来会加载我们输入的字符串<br><br><br><img src="img\CreakMe002\12.png" alt=""><br><br><br>接下来程序会将两个字符串加载到两个寄存器DL，BL中，然后进行对比。<br><br><br><img src="img\CreakMe002\13.png" alt=""><br><br><br>这里因为我们输入的是错误的，因此会跳转到输出错误的语句<br><br><br><img src="img\CreakMe002\15.png" alt=""><br><br><br><img src="img\CreakMe002\16.png" alt=""><br><br><br>当我们输入N0problem是，程序就成功输出正确并跳转到正确的逻辑<br><br><img src="img\CreakMe002\17.png" alt=""><br><br><br><img src="img\CreakMe002\18.png" alt=""><br><br></p>
 
       
     </div>
