@@ -15,13 +15,13 @@
 
 
 
-<meta name="description" content="CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。">
+<meta name="description" content="CreakMe系列是逆向入门的一个很棒的系列。今天我介绍一个很简单的CreakMe002。">
 <meta name="keywords" content="windows逆向">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows逆向CreakMe系列入门：单步调试获取flag">
 <meta property="og:url" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/index.html">
 <meta property="og:site_name" content="流逝在人海">
-<meta property="og:description" content="CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。">
+<meta property="og:description" content="CreakMe系列是逆向入门的一个很棒的系列。今天我介绍一个很简单的CreakMe002。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/20.png">
 <meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/1.png">
@@ -38,10 +38,10 @@
 <meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/16.png">
 <meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/17.png">
 <meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/18.png">
-<meta property="og:updated_time" content="2017-11-22T07:41:15.154Z">
+<meta property="og:updated_time" content="2017-11-29T10:04:53.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows逆向CreakMe系列入门：单步调试获取flag">
-<meta name="twitter:description" content="CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。">
+<meta name="twitter:description" content="CreakMe系列是逆向入门的一个很棒的系列。今天我介绍一个很简单的CreakMe002。">
 <meta name="twitter:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/20.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -208,7 +208,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows逆向/">windows逆向</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf-pwn/">ctf pwn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows逆向/">windows逆向</a></li></ul>
                     </div>
                 </section>
                 
@@ -323,7 +323,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>CreakMe系列是逆向入门的一个很棒的系列，今天我介绍一个很简单的CreakMe002。<br><a id="more"></a><br><br></p>
+        <p>CreakMe系列是逆向入门的一个很棒的系列。<br><br>今天我介绍一个很简单的CreakMe002。<br><a id="more"></a><br><br></p>
 <p><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/20.png" alt=""><br><br><br>程序很简单，输入一个密码，程序会自动比对密码是否正确，正确输出you are right，错误输出you are wrong。<br>逆向分析工具我选择的是ida,windows下的调试工具我选择的是OD。<br>用OD加载该程序，寻找该程序进行密码比对的部分<br><br><br>经过分析，我初步定位了一个函数点<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/1.png" alt=""><br><br><br>F7步入该函数<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/2.png" alt=""><br><br><br>发现了输出正确错误的语句，证明我们的具体思路还是正确的<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/4.png" alt=""><br><br><br>寻找到了接受字符串的函数<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/5.png" alt=""><br><br><br>执行完发现我们输入的12345678储存在储存器EAX中，接着我们发现了一个可疑函数00401000，猜测这个函数就是判断函数。F7跟入。<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/7.png" alt=""><br><br><br>单步调试之后发现程序加载了一串可疑字符串，储存在EDI中<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/8.png" alt=""><br><br><br>接着单步调试，发现了一个解密逻辑<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/9.png" alt=""><br><br><br>加载的可疑字符串经过解密逻辑之后会形成一串有语义的字符串，猜测这个就是该程序的密码。<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/10.png" alt=""><br><br><br>经过运行后发现该密码储存在ESP储存器中<br>接下来会加载我们输入的字符串<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/12.png" alt=""><br><br><br>接下来程序会将两个字符串加载到两个寄存器DL，BL中，然后进行对比。<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/13.png" alt=""><br><br><br>这里因为我们输入的是错误的，因此会跳转到输出错误的语句<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/15.png" alt=""><br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/16.png" alt=""><br><br><br>当我们输入N0problem是，程序就成功输出正确并跳转到正确的逻辑<br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/17.png" alt=""><br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/18.png" alt=""><br><br></p>
 
       
@@ -335,6 +335,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/12/09/DCTF线下赛pwn题攻防/">
+                    DCTF线下赛pwn题攻防
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -407,7 +413,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/12/09/DCTF线下赛pwn题攻防/" title="上一篇: DCTF线下赛pwn题攻防">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -419,7 +427,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/">windows逆向CreakMe系列入门：单步调试获取flag</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/">网络安全学习和CTF学习必不可少的网站</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/12/12/LIEF中文文档/">LIEF中文文档</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/09/DCTF线下赛pwn题攻防/">DCTF线下赛pwn题攻防</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/">windows逆向CreakMe系列入门：单步调试获取flag</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/">网络安全学习和CTF学习必不可少的网站</a></li></ul>
 
 
 

@@ -14,17 +14,26 @@
 <meta name="author" content="蒋钢柱" />
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="流逝在人海">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="最近在整理线下赛用的工具，顺便看到了这道很有意思的题目。接下来我们就来调试一下这个巨坑的题目、">
+<meta name="keywords" content="ctf pwn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DCTF线下赛pwn题攻防">
+<meta property="og:url" content="http://yoursite.com/2017/12/09/DCTF线下赛pwn题攻防/index.html">
 <meta property="og:site_name" content="流逝在人海">
+<meta property="og:description" content="最近在整理线下赛用的工具，顺便看到了这道很有意思的题目。接下来我们就来调试一下这个巨坑的题目、">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2017/12/09/DCTF线下赛pwn题攻防/1.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/09/DCTF线下赛pwn题攻防/2.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/09/DCTF线下赛pwn题攻防/3.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/09/DCTF线下赛pwn题攻防/4.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/09/DCTF线下赛pwn题攻防/5.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/09/DCTF线下赛pwn题攻防/6.png">
+<meta property="og:updated_time" content="2017-12-09T09:23:31.054Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="流逝在人海">
+<meta name="twitter:title" content="DCTF线下赛pwn题攻防">
+<meta name="twitter:description" content="最近在整理线下赛用的工具，顺便看到了这道很有意思的题目。接下来我们就来调试一下这个巨坑的题目、">
+<meta name="twitter:image" content="http://yoursite.com/2017/12/09/DCTF线下赛pwn题攻防/1.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -52,13 +61,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>流逝在人海</title>
+<title>DCTF线下赛pwn题攻防 | 流逝在人海</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,8 +74,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -267,64 +274,7 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-LIEF中文文档" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/12/LIEF中文文档/" class="article-date">
-      <time datetime="2017-12-12T10:06:15.000Z" itemprop="datePublished">2017-12-12</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/12/LIEF中文文档/">LIEF中文文档</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-DCTF线下赛pwn题攻防" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-DCTF线下赛pwn题攻防" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2017/12/09/DCTF线下赛pwn题攻防/" class="article-date">
@@ -342,171 +292,114 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/09/DCTF线下赛pwn题攻防/">DCTF线下赛pwn题攻防</a>
+    <h1 class="article-title" itemprop="name">
+      DCTF线下赛pwn题攻防
     </h1>
   
 
       </header>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>最近在整理线下赛用的工具，顺便看到了这道很有意思的题目。接下来我们就来调试一下这个巨坑的题目、<br></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+      <div class="article-info article-info-post">
+        
 
-      
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ctf-pwn/">ctf pwn</a></li></ul>
     </div>
 
-      
-        <p class="article-more-link">
-          <a href="/2017/12/09/DCTF线下赛pwn题攻防/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-windows逆向CreakMe系列入门：单步调试获取flag-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/" class="article-date">
-      <time datetime="2017-11-21T07:36:24.000Z" itemprop="datePublished">2017-11-21</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/">windows逆向CreakMe系列入门：单步调试获取flag</a>
-    </h1>
-  
-
-      </header>
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>CreakMe系列是逆向入门的一个很棒的系列。<br><br>今天我介绍一个很简单的CreakMe002。<br></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+        <p>最近在整理线下赛用的工具，顺便看到了这道很有意思的题目。接下来我们就来调试一下这个巨坑的题目、<br><a id="more"></a></p>
+<h1 id="开始尝试"><a href="#开始尝试" class="headerlink" title="开始尝试"></a>开始尝试</h1><p>首先，这个程序是X64的。拖入64位的ida查看源码<br><img src="/2017/12/09/DCTF线下赛pwn题攻防/1.png" alt=""><br><br>这是程序主逻辑的源码,可以看见我们有很多选项来进行选择<br><br>根据语义可以看见，程序的前三个选项是用来进行加密解密的，第四个选项是用来进行安全漏洞测试的。优先选择第4个漏洞进行测试，但是不排除前3个函数有漏洞。<br><br><img src="/2017/12/09/DCTF线下赛pwn题攻防/2.png" alt=""><br><br>首先在虚拟机里面进行检查，这个程序启用了什么防护措施<br><br><img src="/2017/12/09/DCTF线下赛pwn题攻防/3.png" alt=""><br><br>开启了栈不可执行和Canary，几乎不可能利用栈。所以尝试格式化字符串<br><br>格式化字符串的利用也失败。<br></p>
+<h1 id="发现目标"><a href="#发现目标" class="headerlink" title="发现目标"></a>发现目标</h1><p>经过查看writeup，我惊讶的发现，在第一个函数的开头，有一个异常捕获程序。有一个函数中存在一个整型溢出的漏洞<br><br><img src="/2017/12/09/DCTF线下赛pwn题攻防/4.png" alt=""><br><br>在sub_400e76的地方有一个转化函数，将输入加一后进行无符号整数的强制转化<br><br><img src="/2017/12/09/DCTF线下赛pwn题攻防/5.png" alt=""><br><br>能够发现，在12行有一个栈溢出漏洞<br><br><img src="/2017/12/09/DCTF线下赛pwn题攻防/6.png" alt=""><br><br>但是我们还是无法解决关于canary的问题。但是这个函数是处于C++额异常捕获机制中的，所以我们可以尝试利用C++的异常捕获机制绕过。</p>
+<h1 id="C-的异常捕获机制"><a href="#C-的异常捕获机制" class="headerlink" title="C++的异常捕获机制"></a>C++的异常捕获机制</h1><h2 id="C-函数的调用和返回"><a href="#C-函数的调用和返回" class="headerlink" title="C++ 函数的调用和返回"></a>C++ 函数的调用和返回</h2><p>首先异常机制中最重要的三个关键字就是：throw try catch，Throw抛出异常，try 包含异常模块，catch 捕捉抛出的异常，三者各有各的分工，集成在一起就构成了异常的基本机制</p>
+<p>首先澄清一点，这里说的 “C++ 函数”是指： 1.该函数可能会直接或间接地抛出一个异常：即该函数的定义存放在一个 C++ 编译（而不是传统 C）单元内，并且该函数没有使用“throw()”异常过滤器。 2.该函数的定义内使用了 try 块。 只需要满足一点即可，<br>异常抛出</p>
+<p>在编译一段 C++ 代码时，编译器会将所有 throw 语句替换为其 C++ 运行时库中的某一指定函数，这里我们叫它 __CxxRTThrowExp（与本文提到的所有其它数据结构和属性名一样，在实际应用中它可以是任意名称）。该函数接收一个编译器认可的内部结构（我们叫它 EXCEPTION 结构）。这个结构中包含了待抛出异常对象的起始地址、用于销毁它的析构函数，以及它的 type_info 信息。对于没有启用 RTTI 机制（编译器禁用了 RTTI 机制或没有在类层次结构中使用虚表）的异常类层次结构，可能还要包含其所有基类的 type_info 信息，以便与相应的 catch 块进行匹配。</p>
+<p>__CxxRTThrowExp 首先接收（并保存）EXCEPTION 对象；然后从 TLS：Current ExpHdl 处找到与当前函数对应的 piHandler、nStep 等异常处理相关数据；并按照前文所述的机制完成异常捕获和栈回退。由此完成了包括“抛出”-&gt;“捕获”-&gt;“回退”等步骤的整套异常处理机制。</p>
+<h2 id="异常捕获机制"><a href="#异常捕获机制" class="headerlink" title="异常捕获机制"></a>异常捕获机制</h2><p>一个异常被抛出时，就会立即引发 C++ 的异常捕获机制： 根据 c++ 的标准，异常抛出后如果在当前函数内没有被捕捉(catch)，它就要沿着函数的调用链继续往上抛，直到走完整个调用链，或者在某个函数中找到相应的 catch。如果走完调用链都没有找到相应的 catch，那么std::terminate() 就会被调用，这个函数默认是把程序 abort，而如果最后找到了相应的 catch，就会进入该 catch 代码块，执行相应的操作。</p>
+<p>程序中的 catch 那部分代码有一个专门的名字叫作：Landing pad（不十分准确），从抛异常开始到执行 landing pad 里的代码这中间的整个过程叫作 stack unwind，这个过程包含了两个阶段： 1）从抛异常的函数开始，对调用链上的函数逐个往前查找 landing pad。</p>
+<p>2）如果没有找到 landing pad 则把程序 abort，否则，则记下 landing pad 的位置，再重新回到抛异常的函数那里开始，一帧一帧地清理调用链上各个函数内部的局部变量，直到 landing pad 所在的函数为止。</p>
+<p>为了能够成功地捕获异常和正确地完成栈回退（stack unwind）<br>栈回退（Stack Unwind）机制</p>
+<p>“回退”是伴随异常处理机制引入 C++ 中的一个新概念，主要用来确保在异常被抛出、捕获并处理后，所有生命期已结束的对象都会被正确地析构，它们所占用的空间会被正确地回收。</p>
 
       
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows逆向/">windows逆向</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-网络安全学习和CTF必不可少的一些网站" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/" class="article-date">
-      <time datetime="2017-11-17T09:24:17.000Z" itemprop="datePublished">2017-11-17</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+
+
+    <nav id="article-nav">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/">网络安全学习和CTF学习必不可少的网站</a>
-    </h1>
-  
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/12/12/LIEF中文文档/">
+                    LIEF中文文档
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/">
+                    windows逆向CreakMe系列入门：单步调试获取flag
+                </a>
+            </div>
+        
+    </nav>
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>通过网络整理了一些关于ctf，网安的学习网站，希望能够帮到大家</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#开始尝试"><span class="toc-number">1.</span> <span class="toc-text">开始尝试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#发现目标"><span class="toc-number">2.</span> <span class="toc-text">发现目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C-的异常捕获机制"><span class="toc-number">3.</span> <span class="toc-text">C++的异常捕获机制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#C-函数的调用和返回"><span class="toc-number">3.1.</span> <span class="toc-text">C++ 函数的调用和返回</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常捕获机制"><span class="toc-number">3.2.</span> <span class="toc-text">异常捕获机制</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"DCTF线下赛pwn题攻防　| 流逝在人海　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
 
 
 
@@ -514,9 +407,35 @@
 
 
 
+    
 
-  
-  
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/12/12/LIEF中文文档/" title="上一篇: LIEF中文文档">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/" title="下一篇: windows逆向CreakMe系列入门：单步调试获取flag">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/12/12/LIEF中文文档/">LIEF中文文档</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/09/DCTF线下赛pwn题攻防/">DCTF线下赛pwn题攻防</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/">windows逆向CreakMe系列入门：单步调试获取flag</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/">网络安全学习和CTF学习必不可少的网站</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
