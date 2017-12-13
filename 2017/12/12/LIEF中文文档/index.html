@@ -15,23 +15,23 @@
 
 
 
-<meta name="description" content="LIEF分析和操作格式这部分教程的目的是概述LIEF的API用来分析处理文件的格式 ELF 我们从ELF格式开始。要从一个文件创建一个ELF.Binary,我们只需朝lief.parse()或lief.ELF.parse()函数传入他的路径。&amp;gt;注意：如果使用的是python的API，那么lief.pars">
+<meta name="description" content="LIEF分析和操作格式这部分教程的目的是概述LIEF的API用来分析处理文件的格式">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LIEF中文文档">
 <meta property="og:url" content="http://yoursite.com/2017/12/12/LIEF中文文档/index.html">
 <meta property="og:site_name" content="流逝在人海">
-<meta property="og:description" content="LIEF分析和操作格式这部分教程的目的是概述LIEF的API用来分析处理文件的格式 ELF 我们从ELF格式开始。要从一个文件创建一个ELF.Binary,我们只需朝lief.parse()或lief.ELF.parse()函数传入他的路径。&amp;gt;注意：如果使用的是python的API，那么lief.parse()和lief.ELF.parse()具有相同的行为。但是在C++中，LIEF::Pa">
+<meta property="og:description" content="LIEF分析和操作格式这部分教程的目的是概述LIEF的API用来分析处理文件的格式">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/12/12/LIEF中文文档/hashme.png">
 <meta property="og:image" content="http://yoursite.com/2017/12/12/LIEF中文文档/2.png">
 <meta property="og:image" content="http://yoursite.com/2017/12/12/LIEF中文文档/3.png">
 <meta property="og:image" content="http://yoursite.com/2017/12/12/LIEF中文文档/4.png">
 <meta property="og:image" content="http://yoursite.com/2017/12/12/LIEF中文文档/5.png">
-<meta property="og:updated_time" content="2017-12-13T12:14:17.188Z">
+<meta property="og:updated_time" content="2017-12-13T12:18:34.917Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LIEF中文文档">
-<meta name="twitter:description" content="LIEF分析和操作格式这部分教程的目的是概述LIEF的API用来分析处理文件的格式 ELF 我们从ELF格式开始。要从一个文件创建一个ELF.Binary,我们只需朝lief.parse()或lief.ELF.parse()函数传入他的路径。&amp;gt;注意：如果使用的是python的API，那么lief.parse()和lief.ELF.parse()具有相同的行为。但是在C++中，LIEF::Pa">
+<meta name="twitter:description" content="LIEF分析和操作格式这部分教程的目的是概述LIEF的API用来分析处理文件的格式">
 <meta name="twitter:image" content="http://yoursite.com/2017/12/12/LIEF中文文档/hashme.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -313,7 +313,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="LIEF"><a href="#LIEF" class="headerlink" title="LIEF"></a>LIEF</h1><h2 id="分析和操作格式"><a href="#分析和操作格式" class="headerlink" title="分析和操作格式"></a>分析和操作格式</h2><p>这部分教程的目的是概述LIEF的API用来分析处理文件的格式</p>
+        <h1 id="LIEF"><a href="#LIEF" class="headerlink" title="LIEF"></a>LIEF</h1><h2 id="分析和操作格式"><a href="#分析和操作格式" class="headerlink" title="分析和操作格式"></a>分析和操作格式</h2><p>这部分教程的目的是概述LIEF的API用来分析处理文件的格式<br><a id="more"></a></p>
 <h3 id="ELF"><a href="#ELF" class="headerlink" title="ELF"></a>ELF</h3><ul>
 <li>我们从ELF格式开始。要从一个文件创建一个ELF.Binary,我们只需朝lief.parse()或lief.ELF.parse()函数传入他的路径。<br><br>&gt;<br>注意：如果使用的是python的API，那么lief.parse()和lief.ELF.parse()具有相同的行为。但是在C++中，LIEF::Parser::parse()将返回指向LIEF::Binary对象的指针，而LIEF::ELF::Parser::parse()将返回LIEF::ELF::**</li>
 </ul>
