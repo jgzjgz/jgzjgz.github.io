@@ -15,13 +15,24 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="流逝在人海">
-<meta property="og:url" content="http://yoursite.com/archives/2017/12/index.html">
+<meta name="description" content="实验吧溢出第一题">
+<meta name="keywords" content="pwn ctf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ROPbaby">
+<meta property="og:url" content="http://yoursite.com/2018/01/31/ROPbaby/index.html">
 <meta property="og:site_name" content="流逝在人海">
+<meta property="og:description" content="实验吧溢出第一题">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/01/31/ROPbaby/ROPbaby-e5c5d8f6.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/31/ROPbaby/ROPbaby-62d2aa9d.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/31/ROPbaby/ROPbaby-a443484e.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/31/ROPbaby/ROPbaby-eead093c.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/31/ROPbaby/ROPbaby-fae59bc0.png">
+<meta property="og:updated_time" content="2018-02-02T01:01:21.494Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="流逝在人海">
+<meta name="twitter:title" content="ROPbaby">
+<meta name="twitter:description" content="实验吧溢出第一题">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/31/ROPbaby/ROPbaby-e5c5d8f6.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -53,7 +64,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2017/12 | 流逝在人海</title>
+<title>ROPbaby | 流逝在人海</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -63,8 +74,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -262,122 +273,157 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-ROPbaby" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2018/01/31/ROPbaby/" class="article-date">
+      <time datetime="2018-01-31T07:37:30.000Z" itemprop="datePublished">2018-01-31</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ROPbaby
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pwn-ctf/">pwn ctf</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/12/16/CTF中PWN的苟活指南/" class="archive-article-date">
-      <time datetime="2017-12-16T12:49:33.000Z" itemprop="datePublished">12-16</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>实验吧溢出第一题<br><a id="more"></a><br>首先checksec这个程序，看开启了什么防护措施<br><img src="/2018/01/31/ROPbaby/ROPbaby-e5c5d8f6.png" alt=""><br><br>然后寻找溢出点，将文件拖入ida，寻找可以利用的溢出点<br><br><img src="/2018/01/31/ROPbaby/ROPbaby-62d2aa9d.png" alt=""><br>发现在84行有一个溢出点<br><br>linux中利用gdb进入这个溢出点测试长度<br><br><img src="/2018/01/31/ROPbaby/ROPbaby-a443484e.png" alt=""><br><br><br><img src="/2018/01/31/ROPbaby/ROPbaby-eead093c.png" alt=""><br><br><br>发现溢出点长度为8<br><br>接下来考虑如何进行利用，由于程序打开了NX，因此不能采用寻常的溢出方法，所以应该采用ROP链来进行溢出点利用。<br><br>需要一个ROP链来进行利用，我需要一个pop；ret<br><br><img src="/2018/01/31/ROPbaby/ROPbaby-fae59bc0.png" alt=""><br><br>选择0x00021102处的rop链<br></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
 
 
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/03/02/jctf二进制方向/">
+                    jctf二进制方向
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/12/16/CTF中PWN的苟活指南/">
+                    CTF中PWN的苟活指南
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/16/CTF中PWN的苟活指南/">CTF中PWN的苟活指南</a>
-    </h1>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"ROPbaby　| 流逝在人海　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-        <div class="article-info info-on-archive">
-          
+    
+</div>
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pwn-二进制-CTF/">Pwn 二进制 CTF</a></li></ul>
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/03/02/jctf二进制方向/" title="上一篇: jctf二进制方向">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/12/16/CTF中PWN的苟活指南/" title="下一篇: CTF中PWN的苟活指南">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/12/12/LIEF中文文档/" class="archive-article-date">
-      <time datetime="2017-12-12T10:06:15.000Z" itemprop="datePublished">12-12</time>
-</a>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/jctf二进制方向/">jctf二进制方向</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/31/ROPbaby/">ROPbaby</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/16/CTF中PWN的苟活指南/">CTF中PWN的苟活指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/12/LIEF中文文档/">LIEF中文文档</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/09/DCTF线下赛pwn题攻防/">DCTF线下赛pwn题攻防</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/">windows逆向CreakMe系列入门：单步调试获取flag</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/">网络安全学习和CTF学习必不可少的网站</a></li></ul>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/12/LIEF中文文档/">LIEF中文文档</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/12/09/DCTF线下赛pwn题攻防/" class="archive-article-date">
-      <time datetime="2017-12-09T02:00:33.000Z" itemprop="datePublished">12-09</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/09/DCTF线下赛pwn题攻防/">DCTF线下赛pwn题攻防</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ctf-pwn/">ctf pwn</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
