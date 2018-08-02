@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13430128-5a76621b498a81da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13430128-dfe152e6bc8cf9c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13430128-67549d9196dd335c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-08-02T10:01:26.994Z">
+<meta property="og:updated_time" content="2018-08-02T10:33:39.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Re_day1">
 <meta name="twitter:description" content="膜李冠成师傅">
@@ -352,6 +352,92 @@
 </ul>
 </li>
 </ul>
+<h3 id="逆向工具分类"><a href="#逆向工具分类" class="headerlink" title="逆向工具分类"></a>逆向工具分类</h3><ul>
+<li>Disassembler</li>
+<li>Tracer(函数级，指令级)</li>
+<li>Debugger（前两者可以实现一个简易的调试器）</li>
+<li>Decompiler（ida支持x86/x86-64/powerpc，jeb支持mips和web assembly）</li>
+<li>Emulator（模拟执行器，qemu，可以模拟cpu硬件）</li>
+<li>Symbolic Execution（符号执行，angr）</li>
+</ul>
+<h3 id="逆向工具"><a href="#逆向工具" class="headerlink" title="逆向工具"></a>逆向工具</h3><ul>
+<li>ida，jeb，binaryninja，radare2综合的逆向工程平台，后两者没有反编译，但是静态分析的api更好用，radare2支持以太网合约调试，但通过retdec可以实现反编译功能</li>
+<li>od，windbg，gdb，调试器</li>
+<li>unicorn-engine，是模拟器</li>
+<li>capstone是全平台的反汇编引擎</li>
+<li>keystone是全平台的汇编引擎</li>
+<li>api monitor，pin（二进制插桩，支持函数级和指令级），processor trace（使用硬件来trace，否则不能检测）</li>
+<li>angr，二进制分析框架，一般用来做符号执行</li>
+<li>panda，集成的静态分析和动态调试工具，ali的自动逆向机器人是基于panda二次开发的<h3 id="逆向流程"><a href="#逆向流程" class="headerlink" title="逆向流程"></a>逆向流程</h3>对于逆向，一般先收集信息</li>
+<li><p>strings/file/binwalk/IDA etc. -&gt; google/gihub</p>
+<p>然后定位关键代码</p>
+</li>
+<li>控制流</li>
+<li>数据交叉引用</li>
+<li>代码交叉引用</li>
+<li>内存搜索，设置r/w断点，比如说在内存中搜索用户输入，定位到内存块，然后在内存块下访问断点</li>
+<li>trace，打印出调用的函数</li>
+</ul>
+<h3 id="真实的逆向工程"><a href="#真实的逆向工程" class="headerlink" title="真实的逆向工程"></a>真实的逆向工程</h3><ul>
+<li>源代码是由程序员写的<ul>
+<li>区分人工编写的代码和编译器加上区的代码</li>
+<li>区分库函数和人工编写的函数</li>
+</ul>
+</li>
+<li>二进制文件是由编译器编译生成的<ul>
+<li>生成的程序是有规律的</li>
+</ul>
+</li>
+<li>代码重用很常见<ul>
+<li>开源代码不需要逆</li>
+</ul>
+</li>
+<li>可执行程序是可执行的<ul>
+<li>善用动态调试</li>
+<li>trace</li>
+<li>符号执行</li>
+<li>污点分析</li>
+</ul>
+</li>
+<li>耐心</li>
+<li>7分猜，3分逆</li>
+</ul>
+<h3 id="技巧-1"><a href="#技巧-1" class="headerlink" title="技巧"></a>技巧</h3><p>  代码是一块一块的看，而非一行一行的看</p>
+<ul>
+<li>常见的加密算法/ACM算法</li>
+<li>常见的数据结构，图/树/哈希表</li>
+<li>常见的设计模式，proxy stub，工厂模式等等</li>
+<li>常见的框架</li>
+</ul>
+<h3 id="混淆"><a href="#混淆" class="headerlink" title="混淆"></a>混淆</h3><p>  混淆的例子</p>
+<ul>
+<li>ollvm，控制流平坦化</li>
+<li>movfuscator</li>
+<li>push rax, ret，相等于jmp rax</li>
+<li><p>vm/smc，虚拟机壳</p>
+<p>解混淆</p>
+</li>
+<li>模拟执行/符号执行</li>
+</ul>
+<h3 id="壳-1"><a href="#壳-1" class="headerlink" title="壳"></a>壳</h3><p>  不同的壳</p>
+<ul>
+<li>先解压-&gt;再执行</li>
+<li>解压一部分-&gt;执行一部分-&gt;重复</li>
+<li>解压-&gt;得到解码器-&gt;解码-&gt;执行</li>
+<li>使用虚拟机</li>
+</ul>
+<h3 id="反调试-1"><a href="#反调试-1" class="headerlink" title="反调试"></a>反调试</h3><p>  调试器探测</p>
+<ul>
+<li>调用api，IsDebuggerPresent等</li>
+<li>try{int3}，catch{}，int3异常在wei状态下会抛给调试器，catch就不会捕捉到该异常，从而达到检测调试器的目的</li>
+<li>timestamp，检测cpu时钟周期</li>
+<li>etc.</li>
+</ul>
+<h3 id="使调试器失效"><a href="#使调试器失效" class="headerlink" title="使调试器失效"></a>使调试器失效</h3><ul>
+<li>重写DebugPort结构，调试器失效</li>
+<li>另起子进程，然后使用父进程调试子进程，使子进程不能被调试，即Debugger Block</li>
+<li>etc.</li>
+</ul>
 <h2 id="re-0"><a href="#re-0" class="headerlink" title="re_0"></a>re_0</h2><p>常规逆向套路，函数加密解密的操作</p>
 <ul>
 <li>p键定义函数，假如函数无法读可以先取消定义(快捷键U) 然后再进行定义</li>
@@ -408,7 +494,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Re-day1"><span class="toc-number">1.</span> <span class="toc-text">Re_day1</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#膜李冠成师傅"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">膜李冠成师傅</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具"><span class="toc-number">1.1.</span> <span class="toc-text">工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技巧"><span class="toc-number">1.2.</span> <span class="toc-text">技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常见算法"><span class="toc-number">1.2.1.</span> <span class="toc-text">常见算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#带混淆的代码-了解原理，找到地址"><span class="toc-number">1.2.2.</span> <span class="toc-text">带混淆的代码(了解原理，找到地址)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#壳"><span class="toc-number">1.2.3.</span> <span class="toc-text">壳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反调试"><span class="toc-number">1.2.4.</span> <span class="toc-text">反调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#re-0"><span class="toc-number">1.3.</span> <span class="toc-text">re_0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#re-1"><span class="toc-number">1.4.</span> <span class="toc-text">re_1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#re-2"><span class="toc-number">1.5.</span> <span class="toc-text">re_2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#evr"><span class="toc-number">1.6.</span> <span class="toc-text">evr</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Re-day1"><span class="toc-number">1.</span> <span class="toc-text">Re_day1</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#膜李冠成师傅"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">膜李冠成师傅</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具"><span class="toc-number">1.1.</span> <span class="toc-text">工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技巧"><span class="toc-number">1.2.</span> <span class="toc-text">技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常见算法"><span class="toc-number">1.2.1.</span> <span class="toc-text">常见算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#带混淆的代码-了解原理，找到地址"><span class="toc-number">1.2.2.</span> <span class="toc-text">带混淆的代码(了解原理，找到地址)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#壳"><span class="toc-number">1.2.3.</span> <span class="toc-text">壳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反调试"><span class="toc-number">1.2.4.</span> <span class="toc-text">反调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逆向工具分类"><span class="toc-number">1.2.5.</span> <span class="toc-text">逆向工具分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逆向工具"><span class="toc-number">1.2.6.</span> <span class="toc-text">逆向工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逆向流程"><span class="toc-number">1.2.7.</span> <span class="toc-text">逆向流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#真实的逆向工程"><span class="toc-number">1.2.8.</span> <span class="toc-text">真实的逆向工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#技巧-1"><span class="toc-number">1.2.9.</span> <span class="toc-text">技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#混淆"><span class="toc-number">1.2.10.</span> <span class="toc-text">混淆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#壳-1"><span class="toc-number">1.2.11.</span> <span class="toc-text">壳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反调试-1"><span class="toc-number">1.2.12.</span> <span class="toc-text">反调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使调试器失效"><span class="toc-number">1.2.13.</span> <span class="toc-text">使调试器失效</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#re-0"><span class="toc-number">1.3.</span> <span class="toc-text">re_0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#re-1"><span class="toc-number">1.4.</span> <span class="toc-text">re_1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#re-2"><span class="toc-number">1.5.</span> <span class="toc-text">re_2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#evr"><span class="toc-number">1.6.</span> <span class="toc-text">evr</span></a></li></ol></li></ol>
         
     </div>
     <style>
