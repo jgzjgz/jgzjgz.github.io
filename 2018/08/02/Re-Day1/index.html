@@ -15,34 +15,23 @@
 
 
 
-<meta name="description" content="CreakMe系列是逆向入门的一个很棒的系列。今天我介绍一个很简单的CreakMe002。">
-<meta name="keywords" content="windows逆向">
+<meta name="description" content="膜李冠成师傅">
+<meta name="keywords" content="Re">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows逆向CreakMe系列入门：单步调试获取flag">
-<meta property="og:url" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/index.html">
+<meta property="og:title" content="Re_day1">
+<meta property="og:url" content="http://yoursite.com/2018/08/02/Re-Day1/index.html">
 <meta property="og:site_name" content="流逝在人海">
-<meta property="og:description" content="CreakMe系列是逆向入门的一个很棒的系列。今天我介绍一个很简单的CreakMe002。">
+<meta property="og:description" content="膜李冠成师傅">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/20.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/1.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/2.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/4.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/5.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/7.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/8.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/9.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/10.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/12.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/13.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/15.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/16.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/17.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/18.png">
-<meta property="og:updated_time" content="2017-11-29T10:04:53.891Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13430128-9d1c3f57e5dfda01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13430128-a397f340770bd60a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13430128-5a76621b498a81da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13430128-67549d9196dd335c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-08-02T09:35:49.545Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windows逆向CreakMe系列入门：单步调试获取flag">
-<meta name="twitter:description" content="CreakMe系列是逆向入门的一个很棒的系列。今天我介绍一个很简单的CreakMe002。">
-<meta name="twitter:image" content="http://yoursite.com/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/20.png">
+<meta name="twitter:title" content="Re_day1">
+<meta name="twitter:description" content="膜李冠成师傅">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/13430128-9d1c3f57e5dfda01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -74,7 +63,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>windows逆向CreakMe系列入门：单步调试获取flag | 流逝在人海</title>
+<title>Re_day1 | 流逝在人海</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -283,11 +272,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-windows逆向CreakMe系列入门：单步调试获取flag-1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Re-Day1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/" class="article-date">
-      <time datetime="2017-11-21T07:36:24.000Z" itemprop="datePublished">2017-11-21</time>
+      <a href="/2018/08/02/Re-Day1/" class="article-date">
+      <time datetime="2018-08-02T09:33:33.000Z" itemprop="datePublished">2018-08-02</time>
 </a>
 
 
@@ -302,7 +291,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      windows逆向CreakMe系列入门：单步调试获取flag
+      Re_day1
     </h1>
   
 
@@ -313,7 +302,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows逆向/">windows逆向</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Re/">Re</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -323,8 +312,74 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>CreakMe系列是逆向入门的一个很棒的系列。<br><br>今天我介绍一个很简单的CreakMe002。<br><a id="more"></a><br><br></p>
-<p><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/20.png" alt=""><br><br><br>程序很简单，输入一个密码，程序会自动比对密码是否正确，正确输出you are right，错误输出you are wrong。<br>逆向分析工具我选择的是ida,windows下的调试工具我选择的是OD。<br>用OD加载该程序，寻找该程序进行密码比对的部分<br><br><br>经过分析，我初步定位了一个函数点<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/1.png" alt=""><br><br><br>F7步入该函数<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/2.png" alt=""><br><br><br>发现了输出正确错误的语句，证明我们的具体思路还是正确的<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/4.png" alt=""><br><br><br>寻找到了接受字符串的函数<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/5.png" alt=""><br><br><br>执行完发现我们输入的12345678储存在储存器EAX中，接着我们发现了一个可疑函数00401000，猜测这个函数就是判断函数。F7跟入。<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/7.png" alt=""><br><br><br>单步调试之后发现程序加载了一串可疑字符串，储存在EDI中<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/8.png" alt=""><br><br><br>接着单步调试，发现了一个解密逻辑<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/9.png" alt=""><br><br><br>加载的可疑字符串经过解密逻辑之后会形成一串有语义的字符串，猜测这个就是该程序的密码。<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/10.png" alt=""><br><br><br>经过运行后发现该密码储存在ESP储存器中<br>接下来会加载我们输入的字符串<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/12.png" alt=""><br><br><br>接下来程序会将两个字符串加载到两个寄存器DL，BL中，然后进行对比。<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/13.png" alt=""><br><br><br>这里因为我们输入的是错误的，因此会跳转到输出错误的语句<br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/15.png" alt=""><br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/16.png" alt=""><br><br><br>当我们输入N0problem是，程序就成功输出正确并跳转到正确的逻辑<br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/17.png" alt=""><br><br><br><img src="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/18.png" alt=""><br><br></p>
+        <p>膜李冠成师傅<br><a id="more"></a></p>
+<h1 id="Re-day1"><a href="#Re-day1" class="headerlink" title="Re_day1"></a>Re_day1</h1><h4 id="膜李冠成师傅"><a href="#膜李冠成师傅" class="headerlink" title="膜李冠成师傅"></a>膜李冠成师傅</h4><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
+<li>Disassembler</li>
+<li>tracer</li>
+<li>Debugger</li>
+<li>Decompiler</li>
+<li>Emulator</li>
+<li>Symbolic Execution</li>
+</ul>
+<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><h3 id="常见算法"><a href="#常见算法" class="headerlink" title="常见算法"></a>常见算法</h3><ul>
+<li>Tea,XTea,XXTea,IDEA,RC4,RC5,RC6,AES,DES,IDEA,MD%,SHA256,SHA1</li>
+</ul>
+<h3 id="带混淆的代码-了解原理，找到地址"><a href="#带混淆的代码-了解原理，找到地址" class="headerlink" title="带混淆的代码(了解原理，找到地址)"></a>带混淆的代码(了解原理，找到地址)</h3><ul>
+<li>ollvm(符号执行ollvm)</li>
+<li>movefuscator(去除分支)</li>
+<li>push rax, ret(jmp rax替换成mov rax, 值; push rax; ret)</li>
+</ul>
+<h3 id="壳"><a href="#壳" class="headerlink" title="壳"></a>壳</h3><ul>
+<li>unpack -&gt; execute</li>
+<li>unpack -&gt; execute -&gt;  unpack -&gt; execute</li>
+<li>unpack -&gt; [decoder|encoded code] -&gt; decode -&gt; execute</li>
+<li>run the virtual machine</li>
+<li>case by case(适用unpack -&gt; execute)</li>
+<li>esp law</li>
+<li>read/proc/[pid]/mem</li>
+</ul>
+<h3 id="反调试"><a href="#反调试" class="headerlink" title="反调试"></a>反调试</h3><ul>
+<li>Debugger Detection<ul>
+<li>API call, isDebuggerPresent()</li>
+<li>try {int3}, catch{}</li>
+<li>timestamp</li>
+</ul>
+</li>
+<li>Debugger interfering<ul>
+<li>Debugportt Overwrite</li>
+<li>Self Debugging</li>
+</ul>
+</li>
+</ul>
+<h2 id="re-0"><a href="#re-0" class="headerlink" title="re_0"></a>re_0</h2><p>常规逆向套路，函数加密解密的操作</p>
+<ul>
+<li>p键定义函数，假如函数无法读可以先取消定义 然后再进行定义</li>
+<li>y键可以更改数据类型</li>
+<li><p>函数解密脚本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">judge=0x600B00</span><br><span class="line">for i in range(182):</span><br><span class="line">    addr=0x600B00+i</span><br><span class="line">    byte=get_bytes(addr,1)</span><br><span class="line">    byte=ord(byte)^0xC</span><br><span class="line">    patch_byte(addr,byte)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>flag解密脚本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#coding:utf8</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    flag = [0x66, 0x6d, 0x63, 0x64, 0x7f, 0x6b, 0x37, 0x64, 0x3b, 0x56, 0x60, 0x3b, 0x6e, 0x70]</span><br><span class="line">    a = &quot;&quot;</span><br><span class="line">    for i in range(len(flag)):</span><br><span class="line">        # print i</span><br><span class="line">        a = a + chr(flag[i] ^ i)</span><br><span class="line">    print(a)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="re-1"><a href="#re-1" class="headerlink" title="re_1"></a>re_1</h2><p>一道常规的win的逆向<br><img src="https://upload-images.jianshu.io/upload_images/13430128-9d1c3f57e5dfda01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1"><br>附上解密脚本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#coding:utf8</span><br><span class="line">s=&apos;;f1K3&#123;c5:efl21t4;1t1zaxpim9&#125;5+?gtux;=vc9v&#123;v7+buhU&#123;bT=-am2q&#125;=fh[x\</span><br><span class="line">k&#123;y?xrqe&#123;?&#125;l5-sd2-Mo+:j&#123;9=sY[dalvpx?z3&#123;?no&#123;[k5ll&#123;zjsu5[kfla+r6Zg72o0s\</span><br><span class="line">kq6cGl5cw[=d?3v9q5-vkjSv&#123;4sqtg=f0cz&#123;+jurjfl[tb]lrfF1;2&#125;udhb?0g8&#123;om:T\</span><br><span class="line">4dh;z:oz-Dn=m=ux;o[gs9&#123;+zqx+sq-dsxctcvykUs2oddrt43pwv:f0;njkrb9l\</span><br><span class="line">os6g0&#123;ih?rqantfx$sslqd:rvqixr;j&#123;?o:sn+[i[yA11;gsmr8lm0?3&#125;;+iv+Tf:4Gtv2:\</span><br><span class="line">-20upi0]7?77=;qzx&#123;m-W;0vtueh]ko8d?=w:fbhd&#123;E:;19?p=k:b+&#125;doht6wpE\</span><br><span class="line">q-z]2qbV1&#125;dh416qw9:xm[;ed;:ecb-0:ni-s4u2kf6]2wn45amzjrun=ofkx-=h\</span><br><span class="line">mgo-lz;j909=rmo7xcj4le0hxs[i]-vjl[?o12:sv4upio7ma1hRy7556+57krev:h\</span><br><span class="line">LQ+1cx65z5v5];6n=[p83;n=&#123;zm&#123;k2p&apos;</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    flag = &quot;&quot;</span><br><span class="line">    for i in range(0, 330, 10):</span><br><span class="line">        flag = flag + s[i+1]</span><br><span class="line">    print flag</span><br></pre></td></tr></table></figure></p>
+<h2 id="re-2"><a href="#re-2" class="headerlink" title="re_2"></a>re_2</h2><p><img src="https://upload-images.jianshu.io/upload_images/13430128-a397f340770bd60a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2"><br><br></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/13430128-5a76621b498a81da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3"><br><br></p>
+<p>分奇偶数进行操作，偶数下标加2异或循环标志，奇数ascill减一异或循环标志</p>
+<h2 id="evr"><a href="#evr" class="headerlink" title="evr"></a>evr</h2><ul>
+<li>writeup：<a href="https://blog.csdn.net/whklhhhh/article/details/78536749" target="_blank" rel="noopener">https://blog.csdn.net/whklhhhh/article/details/78536749</a></li>
+<li>ida在sp指针出错的时候，进行手动修复指针，即可进行反编译。</li>
+<li>反调试可以逐步进行nop，从而进行调试</li>
+<li>用户名可以逆向出来</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#coding:utf8</span><br><span class="line">v4 = [164,169,170,190,188,185,179,169,190,216,190]</span><br><span class="line">for j in range(len(v4)):</span><br><span class="line">    word_41B2F0.append(((((j ^ 0x76) - 52) ^ 0x80) + 43) ^ v4[j])</span><br><span class="line">print word_41B2F0</span><br><span class="line">print len(word_41B2F0)</span><br><span class="line">www = &quot;&quot;</span><br><span class="line">for i in range(len(word_41B2F0)):</span><br><span class="line">    www = www + chr(word_41B2F0[len(word_41B2F0)-i-1])</span><br><span class="line"></span><br><span class="line">print(www)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>分三段</li>
+<li>我是逆着将逻辑解密出来的，原始逻辑是flag先统一异或0x76，然后再分成三段[7:14][14:21][21:28]，分别异或0xad, 0xbe, 0xef，之后再将奇偶位互换</li>
+<li>解密逻辑应该是先将奇偶位互换，再分别异或0xad, 0xbe, 0xef,再统一异或0x76<br>-以下是代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#coding:utf8</span><br><span class="line">flag = [30, 21, 2, 16, 13, 72, 72, 111, 221, 221, 72, 100, 99, 215, 46, 44, 254, 106, 109, 42, 242, 111, 154, 77, 139, 75, 30, 30, 14, 14, 14, 14, 14, 14, 11]</span><br><span class="line">def do(a, b, and_a, xor_a, weiyi):</span><br><span class="line">    for i in range(a,b):</span><br><span class="line">        ji = (flag[i] &amp; and_a) &lt;&lt; weiyi</span><br><span class="line">        ou = (flag[i] &gt;&gt; weiyi) &amp; and_a</span><br><span class="line">        shu = ji|ou</span><br><span class="line">        shu = shu^xor_a</span><br><span class="line">        flag[i] = shu</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">  do(7, 14, 0x55, 0xad, 1)</span><br><span class="line">  do(14, 21, 0x33, 0xbe, 2)</span><br><span class="line">  do(21, 28, 0xf, 0xef, 4)</span><br><span class="line"></span><br><span class="line">  for i in range(len(flag)):</span><br><span class="line">      flag[i] = chr(flag[i] ^ 0x76)</span><br><span class="line">  print &quot;&quot;.join(flag)</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/13430128-67549d9196dd335c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 
       
     </div>
@@ -336,16 +391,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/12/09/DCTF线下赛pwn题攻防/">
-                    DCTF线下赛pwn题攻防
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/">
-                    网络安全学习和CTF学习必不可少的网站
+                <a href="/2018/08/02/2018_re_day1/">
+                    Re_day1
                 </a>
             </div>
         
@@ -357,7 +406,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Re-day1"><span class="toc-number">1.</span> <span class="toc-text">Re_day1</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#膜李冠成师傅"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">膜李冠成师傅</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具"><span class="toc-number">1.1.</span> <span class="toc-text">工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技巧"><span class="toc-number">1.2.</span> <span class="toc-text">技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常见算法"><span class="toc-number">1.2.1.</span> <span class="toc-text">常见算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#带混淆的代码-了解原理，找到地址"><span class="toc-number">1.2.2.</span> <span class="toc-text">带混淆的代码(了解原理，找到地址)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#壳"><span class="toc-number">1.2.3.</span> <span class="toc-text">壳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反调试"><span class="toc-number">1.2.4.</span> <span class="toc-text">反调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#re-0"><span class="toc-number">1.3.</span> <span class="toc-text">re_0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#re-1"><span class="toc-number">1.4.</span> <span class="toc-text">re_1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#re-2"><span class="toc-number">1.5.</span> <span class="toc-text">re_2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#evr"><span class="toc-number">1.6.</span> <span class="toc-text">evr</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -393,7 +442,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"windows逆向CreakMe系列入门：单步调试获取flag　| 流逝在人海　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Re_day1　| 流逝在人海　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -413,15 +462,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/12/09/DCTF线下赛pwn题攻防/" title="上一篇: DCTF线下赛pwn题攻防">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/" title="下一篇: 网络安全学习和CTF学习必不可少的网站">
+            <a href="/2018/08/02/2018_re_day1/" title="下一篇: Re_day1">
                 <i class="fa fa-angle-right"></i>
             </a>
         
