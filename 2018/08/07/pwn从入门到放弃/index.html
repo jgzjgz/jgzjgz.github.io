@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="堆结构：">
-<meta name="keywords" content="ctf pwn">
+<meta name="description" content="_IO_FILE">
+<meta name="keywords" content="pwn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="堆">
-<meta property="og:url" content="http://yoursite.com/2018/03/11/堆/index.html">
+<meta property="og:title" content="pwn从入门到放弃">
+<meta property="og:url" content="http://yoursite.com/2018/08/07/pwn从入门到放弃/index.html">
 <meta property="og:site_name" content="流逝在人海">
-<meta property="og:description" content="堆结构：">
+<meta property="og:description" content="_IO_FILE">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-02T01:33:51.825Z">
+<meta property="og:updated_time" content="2018-08-07T12:15:09.179Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="堆">
-<meta name="twitter:description" content="堆结构：">
+<meta name="twitter:title" content="pwn从入门到放弃">
+<meta name="twitter:description" content="_IO_FILE">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>堆 | 流逝在人海</title>
+<title>pwn从入门到放弃 | 流逝在人海</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -267,11 +267,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-堆" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-pwn从入门到放弃" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/03/11/堆/" class="article-date">
-      <time datetime="2018-03-11T11:28:32.000Z" itemprop="datePublished">2018-03-11</time>
+      <a href="/2018/08/07/pwn从入门到放弃/" class="article-date">
+      <time datetime="2018-08-07T00:59:44.000Z" itemprop="datePublished">2018-08-07</time>
 </a>
 
 
@@ -286,7 +286,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      堆
+      pwn从入门到放弃
     </h1>
   
 
@@ -297,7 +297,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ctf-pwn/">ctf pwn</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pwn/">pwn</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -307,8 +307,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>堆结构：</p>
-
+        <h1 id="IO-FILE"><a href="#IO-FILE" class="headerlink" title="_IO_FILE"></a>_IO_FILE</h1>
       
     </div>
     
@@ -320,15 +319,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/08/02/Re-Day1/">
-                    Re_day1
+                <a href="/2018/08/08/pwn的进阶放弃/">
+                    pwn的进阶放弃
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/03/06/heart/">
-                    heart
+                <a href="/2018/08/06/heap-1/">
+                    heap_1
                 </a>
             </div>
         
@@ -340,7 +339,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#IO-FILE"><span class="toc-number">1.</span> <span class="toc-text">_IO_FILE</span></a></li></ol>
         
     </div>
     <style>
@@ -376,7 +375,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"堆　| 流逝在人海　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"pwn从入门到放弃　| 流逝在人海　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -396,7 +395,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/08/02/Re-Day1/" title="上一篇: Re_day1">
+            <a href="/2018/08/08/pwn的进阶放弃/" title="上一篇: pwn的进阶放弃">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -404,7 +403,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/03/06/heart/" title="下一篇: heart">
+            <a href="/2018/08/06/heap-1/" title="下一篇: heap_1">
                 <i class="fa fa-angle-right"></i>
             </a>
         

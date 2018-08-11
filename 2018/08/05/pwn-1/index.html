@@ -15,14 +15,18 @@
 
 
 
+<meta name="description" content="系统调用 32: eax-(syscall号)，ebx，ecx，edx参数 64: rax-(syscall号),rdi,rsi,rdx,rcx,r8,r9参数">
+<meta name="keywords" content="pwn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pwn_1">
 <meta property="og:url" content="http://yoursite.com/2018/08/05/pwn-1/index.html">
 <meta property="og:site_name" content="流逝在人海">
+<meta property="og:description" content="系统调用 32: eax-(syscall号)，ebx，ecx，edx参数 64: rax-(syscall号),rdi,rsi,rdx,rcx,r8,r9参数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-05T01:02:22.806Z">
+<meta property="og:updated_time" content="2018-08-05T10:06:29.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pwn_1">
+<meta name="twitter:description" content="系统调用 32: eax-(syscall号)，ebx，ecx，edx参数 64: rax-(syscall号),rdi,rsi,rdx,rcx,r8,r9参数">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -188,7 +192,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pwn-二进制-CTF/">Pwn 二进制 CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Re/">Re</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf/">ctf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf-pwn/">ctf pwn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pwn-ctf/">pwn ctf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows逆向/">windows逆向</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安卓/">安卓</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pwn-二进制-CTF/">Pwn 二进制 CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Re/">Re</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf/">ctf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf-pwn/">ctf pwn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pwn/">pwn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pwn-ctf/">pwn ctf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows逆向/">windows逆向</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安卓/">安卓</a></li></ul>
                     </div>
                 </section>
                 
@@ -292,6 +296,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pwn/">pwn</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -299,7 +307,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h2 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h2><ul>
+<li>32: eax-(syscall号)，ebx，ecx，edx参数</li>
+<li>64: rax-(syscall号),rdi,rsi,rdx,rcx,r8,r9参数</li>
+</ul>
+
       
     </div>
     
@@ -309,6 +321,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/08/06/heap-1/">
+                    heap_1
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -325,7 +343,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#系统调用"><span class="toc-number">1.</span> <span class="toc-text">系统调用</span></a></li></ol>
         
     </div>
     <style>
@@ -381,7 +399,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2018/08/06/heap-1/" title="上一篇: heap_1">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -393,7 +413,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/pwn-1/">pwn_1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/04/安卓逆向-day1/">安卓逆向_day1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/03/Re-day2/">Re_day2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/02/Re-Day1/">Re_day1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/11/堆/">堆</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/06/heart/">heart</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/jctf二进制方向/">jctf二进制方向</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/31/ROPbaby/">ROPbaby</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/16/CTF中PWN的苟活指南/">CTF中PWN的苟活指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/12/LIEF中文文档/">LIEF中文文档</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/09/DCTF线下赛pwn题攻防/">DCTF线下赛pwn题攻防</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/">windows逆向CreakMe系列入门：单步调试获取flag</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/">网络安全学习和CTF学习必不可少的网站</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/10/writeup/">writeup</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/08/pwn的进阶放弃/">pwn的进阶放弃</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/07/pwn从入门到放弃/">pwn从入门到放弃</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/06/heap-1/">heap_1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/pwn-1/">pwn_1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/04/安卓逆向-day1/">安卓逆向_day1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/03/Re-day2/">Re_day2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/02/Re-Day1/">Re_day1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/11/堆/">堆</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/06/heart/">heart</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/jctf二进制方向/">jctf二进制方向</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/31/ROPbaby/">ROPbaby</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/16/CTF中PWN的苟活指南/">CTF中PWN的苟活指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/12/LIEF中文文档/">LIEF中文文档</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/09/DCTF线下赛pwn题攻防/">DCTF线下赛pwn题攻防</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/windows逆向CreakMe系列入门：单步调试获取flag-1/">windows逆向CreakMe系列入门：单步调试获取flag</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/17/网络安全学习和CTF必不可少的一些网站/">网络安全学习和CTF学习必不可少的网站</a></li></ul>
 
 
 
@@ -488,5 +508,5 @@
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-miku"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
